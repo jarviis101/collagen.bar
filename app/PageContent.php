@@ -10,5 +10,5 @@ class PageContent extends Model
     protected $primaryKey = 'id';
     public $timestamp = true;
     protected $fillable = [
-        'about_us', 'about_collagen'];
+        'about_us', 'about_collagen', 'image_about_us', 'image_collagen'];
 }

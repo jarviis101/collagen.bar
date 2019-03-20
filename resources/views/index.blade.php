@@ -72,14 +72,15 @@
         </div>
         <div class="col-xl-6 d-flex justify-content-center h-712px">
             <div class="img-block">
-                <img src="img/crazy-for-collagen.png" alt="">
+
+                <img src="{{ asset('storage/' . $page_content->image_about_us) }}" alt="">
             </div>
         </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-xl-6 d-flex justify-content-center h-712px">
             <div class="img-block">
-                <img src="img/VP2_1crop_preview-1024x1024.png" alt="">
+                    <img src="{{ asset('storage/' . $page_content->image_collagen) }}" alt="">
             </div>
         </div>
         <div class="col-xl-6 about-us-content">
