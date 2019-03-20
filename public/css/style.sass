@@ -1,0 +1,486 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway")
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display")
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,900')
+@import url("https://fonts.googleapis.com/css?family=Open+Sans")
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700")
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600,900')
+
+$roboto: 'Roboto'
+$playfair: 'Playfair Display'
+$os: 'Open Sans'
+$exo-2: 'Exo 2'
+$montserrat: 'Montserrat'
+
+@media (min-width: 1200px)
+	.container 
+		max-width: 1340px
+
+
+#menu
+	i.fas
+		font-size: 36px
+		color: #fff
+		transition: color 0.25s
+		&:hover 
+				color: #6087c2 !important
+.button-nav
+	background: transparent
+	border: none
+.navbar-brand
+	font-family: $montserrat
+	font-style: normal
+	font-weight: bold
+	line-height: normal
+	text-transform: uppercase
+	margin-top: 29px
+	margin-bottom: 29px
+	color: #fff
+	font-size: 2rem
+	transition: color 0.25s
+
+	&:hover 
+		color: #6087c2 !important
+
+.collapse:not(.show) 
+	display: none
+
+.nav-list
+	margin-bottom: 0
+	display: flex
+	align-items: center
+
+
+	.nav-item
+		font-family: $roboto
+		text-transform: uppercase
+		font-weight: bold
+		list-style-type: none
+		.nav-link
+			color: #fff
+			position: relative
+			text-align: center
+			text-decoration: none
+			transition: color 0.25s
+			&::before,&::after 
+				border: 2px solid transparent
+				width: 0
+				height: 0
+
+			&::before 
+				top: 0
+				left: 0
+
+			&::after 
+				bottom: 0
+				right: 0
+  			
+			&:hover 
+				color: #6087c2
+  
+#index-title-section
+	position: relative
+	
+	.sliders-arrows
+		position: absolute
+		display: flex
+		z-index: 999
+		bottom: 25px
+
+	.prev-block, .next-block
+		border-color: #000
+
+	.slick-prev
+		margin: 0 20px
+		.prev-block
+			i.fas
+				color: #000
+		&:hover
+			.prev-block
+				border-color: #007bff
+			i.fas
+				transition: all 0.5s ease
+				color: #007bff
+
+
+	.slick-next
+		margin: 0 20px
+		.next-block
+			i.fas
+				color: #000
+		&:hover
+			.next-block
+				border-color: #007bff
+			i.fas
+				transition: all 0.5s ease
+				color: #007bff
+	
+
+.title-bg-image
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: -999
+	display: flex
+	justify-content: center
+	align-items: center
+	img
+		height: inherit
+		width: 100%
+.title-text
+	text-align: right
+	font-family: $montserrat
+	font-weight: bold
+	font-style: normal
+	line-height: 80px
+	font-size: 3rem
+	margin-top: 100px
+	color: #fff
+	text-shadow: 4px 3px 3px #E4DCD7
+	text-transform: uppercase
+	margin-bottom: 80px
+.navbar
+	position: absolute
+	top: 0
+	z-index: 999
+
+.btn-custom
+	font-family: $os
+	font-style: normal
+	font-weight: bold
+	text-align: center
+	background: #C3CCEA
+	border-color: #C3CCEA
+	text-transform: uppercase
+	padding-top: 22px
+	padding-bottom: 22px
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1)
+	transition: all 0.3s ease 0s
+	cursor: pointer
+	outline: none
+	margin-bottom: 150px
+	&:hover
+		background-color: #C3CCEA
+		border-color: transparent
+		-webkit-box-shadow: 6px 6px 5px 0px #CBEBF8
+		-moz-box-shadow: 6px 6px 5px 0px #CBEBF8
+		box-shadow: 6px 6px 5px 0px #CBEBF8
+		color: #fff
+		transform: translateY(-7px)
+
+.slide-item
+	padding-top: 100px
+
+.prev-block, .next-block
+	width: 40px
+	height: 40px
+	display: flex
+	border: 1px solid transparent
+	border-radius: 50%
+	align-items: center 
+	justify-content: center
+	i.fas
+		color: #fff
+		font-size: 20px
+	&:hover
+		cursor: pointer
+		border-color: #007bff 
+		transition: all 0.3s ease
+		i.fas
+			color: #007bff
+
+.site-bar
+	position: absolute
+	bottom: 15px
+	z-index: 999
+
+.eclipse
+	width: 25px
+	height: 25px
+	border-radius: 50%
+	background: #F8F8F8
+
+
+
+
+.img-block
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: -999
+	display: flex
+	img
+		height: inherit
+		width: 100%
+
+.about-us-content
+	padding-top: 70px
+	.title
+		margin-bottom: 70px
+		font-family: $montserrat
+		font-style: normal
+		font-weight: 300
+		line-height: normal
+		text-transform: uppercase
+		padding: 22px 60px
+		border: 5px solid #C3CCEA
+		box-sizing: border-box
+	.text
+		font-family: $montserrat
+		font-style: normal
+		font-weight: normal
+		line-height: 39px
+
+#index-about-us-section
+	.btn-custom
+		margin-bottom: 90px
+#index-products-section
+	background: #CBD5F8
+	position: relative
+	padding-top: 50px
+	padding-bottom: 60px
+	
+	.btn-r
+		margin-bottom: 60px
+
+	.title	
+		color: #fff
+		text-transform: uppercase
+		font-family: $montserrat
+		font-style: normal
+		font-size: 2rem
+		font-weight: normal
+
+	.subtitle
+		color: #000
+		font-family: $montserrat
+		margin-left: 50px
+		font-style: normal
+		font-size: 1.3rem
+		font-weight: bold
+		
+	.sliders-arrows
+		position: absolute
+		display: flex
+		z-index: 999
+		bottom: 10px
+		right: 0
+		justify-content: flex-end
+
+	.slick-prev
+		margin: 0 20px
+		.prev-block
+			i.fas
+				color: #fff
+		&:hover
+			.prev-block
+				border-color: #007bff
+			i.fas
+				transition: all 0.5s ease
+				color: #007bff
+
+	.slick-next
+		margin: 0 20px
+		.next-block
+			i.fas
+				color: #fff
+		&:hover
+			.next-block
+				border-color: #007bff
+			i.fas
+				transition: all 0.5s ease
+				color: #007bff
+
+	.product
+		position: relative
+		height: 410px
+
+	.img-product-block
+		display: flex
+		position: relative
+		justify-content: flex-start
+		align-items: center
+		top: 0
+		left: 0
+		height: 100%
+		img
+			height: inherit
+	
+	.name-of-type
+		position: absolute
+		z-index: 999
+		right: 0
+		top: 169px
+		color: #000
+		padding: 26px 90px
+		font-family: $montserrat
+		font-style: normal
+		font-weight: bold
+		line-height: 20px
+		background: #D2D9F1
+		&:hover
+			text-decoration: none
+			color: #007bff
+
+	.type-of-slider
+		display: flex
+		margin: 0 auto
+
+#index-services-section
+	background: #CBEAF8
+	position: relative
+	padding-top: 50px
+	padding-bottom: 60px
+
+	.title
+		color: #fff
+		text-transform: uppercase
+		font-family: $montserrat
+		font-style: normal
+		font-size: 2rem
+		font-weight: normal
+
+	.subtitle
+		color: #000
+		font-family: $montserrat
+		margin-left: 50px
+		font-style: normal
+		font-size: 1.3rem
+		font-weight: bold
+	
+	.sliders-arrows
+		position: absolute
+		display: flex
+		z-index: 999
+		bottom: 10px
+		right: 0
+		justify-content: flex-end
+
+	.slick-prev
+		margin: 0 20px
+		.prev-block
+			i.fas
+				color: #fff
+		&:hover
+			.prev-block
+				border-color: #007bff
+			i.fas
+				transition: all 0.5s ease
+				color: #007bff
+
+	.slick-next
+		margin: 0 20px
+		.next-block
+			i.fas
+				color: #fff
+		&:hover
+			.next-block
+				border-color: #007bff
+			i.fas
+				transition: all 0.5s ease
+				color: #007bff
+
+	.product
+		position: relative
+		height: 410px
+
+	.img-product-block
+		display: flex
+		position: relative
+		justify-content: flex-start
+		align-items: center
+		top: 0
+		left: 0
+		height: 100%
+		img
+			height: inherit
+	
+	.name-of-type
+		position: absolute
+		z-index: 999
+		right: 0
+		top: 169px
+		color: #000
+		padding: 26px 90px
+		font-family: $montserrat
+		font-style: normal
+		font-weight: bold
+		line-height: 20px
+		background: #C5E3F4
+		&:hover
+			text-decoration: none
+			color: #007bff
+
+	.services-slider
+		display: flex
+		margin: 0 auto
+
+.link-site-bar
+	color: #000
+	font-weight: bold
+	margin-left: 5px
+	line-height: 26px
+	font-family: $montserrat
+	&:hover
+		text-decoration: none
+
+.mt-100px
+	margin-top: 100px
+.h-712px
+	height: 712px
+#footer-section
+	padding-bottom:70px
+	background: #F1F1F1
+	.title-text
+		margin-top: 60px
+		margin-bottom:0
+		text-align: left
+		h5
+			padding-left: 1rem
+			font-size: 1.2rem
+			font-family: $montserrat
+			font-style: normal
+			font-weight: bold
+			color: #000
+			line-height: normal
+			margin-bottom: 20px
+
+	.nav-link
+		font-family: $montserrat
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: normal
+		color: #000
+		&:hover
+			color: #007bff
+		i
+			font-size: 30px
+			&:hover
+				color: #007bff
+
+	.conference
+		p
+			font-family: $montserrat
+			color: #BDBDBD
+			font-style: normal
+			font-weight: 500
+			font-size: 16px
+			line-height: 29px
+
+		span
+			font-family: $montserrat
+			font-style: normal
+			font-weight: 500
+			font-size: 14px
+			line-height: 26px
+			color: #707AFE
+		.tel-link
+			font-family: $montserrat
+			font-style: normal
+			font-weight: 500
+			font-size: 18px
+			line-height: 33px
+
+			color: #000000
