@@ -5,25 +5,27 @@
 <section id="index-title-section">
     <!-- foreach -->
 	<div class="slider title-slider">
+        @foreach ($home_page_title as $item)
 		<div class="slide-item col-12">
 			<div class="title-bg-image">
-				<img src="img/DSC04602.png" alt="">
+            <img src="{{ asset('storage/' . $item->image) }}" alt="">
 			</div>
 			<div class="container">
 				<div class="row justify-content-center">
 					<h1 class="d-flex justify-content-end align-items-center col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 title-text">
-						Уникальная косметика с коллагеном
+                        {{ $item->title }}
 					</h1>
 				</div>
 				<div class="row btn-r">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-11 d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-end justify-content-xl-end">
-						<button class="btn btn-info btn-custom col-7 col-sm-7 col-md-6 col-lg-5 col-xl-4">
-							Подробнее
-						</button>
+						<a href="{{ $item->link }}" class="btn btn-info btn-custom col-7 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                            Подробнее
+                        </a>
 					</div>
 				</div>
 		    </div>
-		</div>
+        </div>
+        @endforeach
     </div>
     <!-- endforeach -->
 	<div class="sliders-arrows container">
@@ -98,38 +100,16 @@
 	</div>
 	<div class="row mt-100px">
 		<div class="slider col-xl-12 type-of-slider">
+            @foreach ($category as $item)
 			<div class="slider-item">
 				<div class="col-xl-12 product">
 				    <div class="img-product-block">
-						<a href="#" class="name-of-type"><span>Коллаген</span></a>
-						<img src="img/product(1).png" alt="">
+						<a href="/{{$item->slug}}" class="name-of-type"><span>{{ $item->name }}</span></a>
+						<img src="{{ asset('storage/' . $item->image) }}" alt="">
 					</div>
 				</div>
-			</div>
-			<div class="slider-item">
-			    <div class="col-xl-12 product">
-					<div class="img-product-block">
-						<a href="#" class="name-of-type"><span>Косметика с коллагеном</span></a>
-						<img src="img/product(2).png" alt="">
-					</div>
-				</div>
-			</div>
-			<div class="slider-item">
-				<div class="col-xl-12 product">
-					<div class="img-product-block">
-						<a href="#" class="name-of-type"><span>Косметика с коллагеном</span></a>
-						<img src="img/product(2).png" alt="">
-					</div>
-				</div>
-			</div>		
-			<div class="slider-item">
-				<div class="col-xl-12 product">
-					<div class="img-product-block">
-						<a href="#" class="name-of-type"><span>Косметика с коллагеном</span></a>
-						<img src="img/product(2).png" alt="">
-					</div>
-				</div>
-			</div>					
+            </div>
+            @endforeach					
 		</div>
 		<div class="sliders-arrows container">
 			<a data-role="none" class="slick-prev">
