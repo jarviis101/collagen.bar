@@ -15,14 +15,34 @@ $montserrat: 'Montserrat'
 	.container 
 		max-width: 1340px
 
+.collapsing, .show
+	display: flex 
+	align-items: center
+	@media screen and (max-width: 767px)
+		position: absolute
+		bottom: -20px
+		left: 0
+		.nav-list
+			padding: 0
+
+		.basket
+			margin-left: 20px
+			display: none
+
+
 
 #menu
+	position: fixed
+	z-index: 999
 	i.fas
 		font-size: 36px
 		color: #fff
 		transition: color 0.25s
 		&:hover 
-				color: #6087c2 !important
+			color: #6087c2 !important
+		@media screen and (max-width: 575px)
+			font-size: 25px
+
 .button-nav
 	background: transparent
 	border: none
@@ -40,6 +60,10 @@ $montserrat: 'Montserrat'
 
 	&:hover 
 		color: #6087c2 !important
+	@media screen and (max-width:575px)
+		font-size: 1.6rem
+	@media screen and (max-width:374px)
+		font-size: 1.2rem
 
 .collapse:not(.show) 
 	display: none
@@ -48,6 +72,10 @@ $montserrat: 'Montserrat'
 	margin-bottom: 0
 	display: flex
 	align-items: center
+	@media screen and (max-width: 575px)
+		flex-direction: column
+		position: absolute
+		left: 1.5375rem
 
 
 	.nav-item
@@ -61,6 +89,10 @@ $montserrat: 'Montserrat'
 			text-align: center
 			text-decoration: none
 			transition: color 0.25s
+			@media screen and (max-width: 991px)
+				font-size: 0.8rem
+			@media screen and (max-width: 767px)
+				font-size: 1rem
 			&::before,&::after 
 				border: 2px solid transparent
 				width: 0
@@ -76,7 +108,14 @@ $montserrat: 'Montserrat'
   			
 			&:hover 
 				color: #6087c2
-  
+.basket-in-menu
+	display: none
+	@media screen and (max-width: 575px)
+		position: static
+		display: flex
+
+
+
 #index-title-section
 	position: relative
 	
@@ -113,6 +152,23 @@ $montserrat: 'Montserrat'
 			i.fas
 				transition: all 0.5s ease
 				color: #007bff
+	.btn-custom
+		@media screen and (max-width: 991px)
+			margin-bottom: 100px
+
+	.title-text
+		@media screen and (max-width: 991px)
+			text-align: center
+			font-size: 2.6rem
+			margin-top: 50px
+			margin-bottom: 60px
+		@media screen and (max-width: 767px)
+			line-height: 50px
+			font-size: 2rem
+
+	.btn-r
+		@media screen and (max-width: 1199px)
+			justify-content: center
 	
 
 .title-bg-image
@@ -128,6 +184,8 @@ $montserrat: 'Montserrat'
 	img
 		height: inherit
 		width: 100%
+		@media screen and(max-width: 1199px)
+			width: auto
 .title-text
 	text-align: right
 	font-family: $montserrat
@@ -144,6 +202,10 @@ $montserrat: 'Montserrat'
 	position: absolute
 	top: 0
 	z-index: 999
+	@media screen and (max-width: 575px)
+		width: 100%
+		>.container-fluid
+			justify-content: space-between
 
 .btn-custom
 	font-family: $os
@@ -216,6 +278,9 @@ $montserrat: 'Montserrat'
 
 .about-us-content
 	padding-top: 70px
+	@media screen and (max-width: 45px)
+		padding-top: 45px
+
 	.title
 		margin-bottom: 70px
 		font-family: $montserrat
@@ -226,15 +291,32 @@ $montserrat: 'Montserrat'
 		padding: 22px 60px
 		border: 5px solid #C3CCEA
 		box-sizing: border-box
+		@media screen and (max-width: 1199px)
+			margin-bottom: 35px
+		@media screen and (max-width: 991px)
+			padding: 12px 60px
+		@media screen and (max-width: 575px)
+			padding: 12px 15px
+			font-size: 1.5rem
+
 	.text
 		font-family: $montserrat
 		font-style: normal
 		font-weight: normal
 		line-height: 39px
+		@media screen and (max-width: 1199px)
+			line-height: 36px
+		@media screen and (max-width: 991px)
+			line-height: 28px
 
 #index-about-us-section
 	.btn-custom
 		margin-bottom: 90px
+		@media screen and (max-width: 1199px)
+			margin-bottom: 86px
+		@media screen and (max-width: 991px)
+			margin-bottom: 55px
+
 #index-products-section
 	background: #CBD5F8
 	position: relative
@@ -429,6 +511,17 @@ $montserrat: 'Montserrat'
 	margin-top: 100px
 .h-712px
 	height: 712px
+	@media screen and (max-width: 1199px)
+		height: auto
+	@media screen and (max-width: 767px)
+		height: 550px
+	@media screen and (max-width: 575px)
+		height: 480px
+	@media screen and (max-width: 375px)
+		height: 425px
+	@media screen and (max-width: 320px)
+		height: 385px
+
 #footer-section
 	padding-bottom:70px
 	background: #F1F1F1
