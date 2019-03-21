@@ -18,6 +18,10 @@ class PageController extends Controller
         $page_content = HomePageContent::find(1);
         return view('index')->with('home_page_title', $home_page_title)->with('page_content', $page_content)->with('category', $category);
     }
+    public static function newsList()
+    {
+        return view('news');
+    }
     public static function getContacts()
     {
         $contacts = Contact::find(1);
@@ -25,6 +29,7 @@ class PageController extends Controller
     }
     public static function getFooter()
     {
+        $category = Category::orderBy('created_at')->get();
         $footer = Footer::find(1);
         return $footer;
     }

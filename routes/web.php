@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'PageController@index')->name('home');
+Route::get('/', 'PageController@index');
+Route::get('/news', 'PageController@newsList');
 
 
 Route::group(['prefix' => 'admin'], function () {

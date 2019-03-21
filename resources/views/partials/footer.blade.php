@@ -1,7 +1,8 @@
 <section class="container-fluid" id="footer-section">
     @php
         $contact = \App\Http\Controllers\PageController::getContacts();
-        $footer = \App\Http\Controllers\PageController::getFooter();
+		$footer = \App\Http\Controllers\PageController::getFooter();
+		$category = \App\Category::orderBy('created_at')->get();
     @endphp
     <div class="container">
 			<div class="row">
@@ -26,9 +27,9 @@
 						<h5>Продукт</h5>
 					</div>
 					<div class="row justify-content-start">
-						<a href="#" class="nav-link col-12">Коллаген</a>
-						<a href="#" class="nav-link col-12">Косметика с коллагеном</a>
-						<a href="#" class="nav-link col-12">Креатин для волос</a>
+						@foreach ($category as $item)
+							<a href="/{{ $item->slug }}" class="nav-link col-12">{{ $item->name }}</a>
+						@endforeach
 					</div>
 				</div>
 				<div class="col-6 col-sm-4 col-md-4 col-lg-2 col-xl-2">
