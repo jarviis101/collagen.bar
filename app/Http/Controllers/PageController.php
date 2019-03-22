@@ -7,6 +7,7 @@ use App\Category;
 use App\HomePageTitle;
 use App\Footer;
 use App\News;
+use App\Postq;
 use App\HomePageContent;
 use Illuminate\Http\Request;
 
@@ -19,6 +20,8 @@ class PageController extends Controller
         $page_content = HomePageContent::find(1);
         return view('index')->with('home_page_title', $home_page_title)->with('page_content', $page_content)->with('category', $category);
     }
+
+
     public static function newsList()
     {
         $news = News::orderBy('created_at')->get();
@@ -29,6 +32,13 @@ class PageController extends Controller
         $news = News::where('slug', '=', $slug)->get();
         return view('news.innerNews')->with('news', $news);
     }
+
+    public static function postList()
+    {
+        $post = Postq::orderBy('created_at')->get();
+        return view('post.post')->with('post', $post);
+    }
+
     public static function getContacts()
     {
         $contacts = Contact::find(1);

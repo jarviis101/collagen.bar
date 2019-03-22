@@ -1200,4 +1200,177 @@
   }
 }
 
+#title-posts-section, #list-posts-section, #additional-posts-section {
+  max-width: 1440px;
+  margin-top: 85px;
+}
+#title-posts-section .title-block, #list-posts-section .title-block, #additional-posts-section .title-block {
+  background: url("../img/Component (4).png") no-repeat center top;
+  background-position-y: 100px;
+}
+#title-posts-section .title-text-bg, #list-posts-section .title-text-bg, #additional-posts-section .title-text-bg {
+  margin-top: 60px;
+  background: url("../img/Rectangle 4.4.png") repeat-x center;
+  background-position-x: 0px;
+  background-repeat-x: inherit;
+}
+#title-posts-section .title-text-bg h1, #list-posts-section .title-text-bg h1, #additional-posts-section .title-text-bg h1 {
+  font-weight: 900;
+  color: #fff;
+  line-height: normal;
+  padding: 20px 60px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 575px) {
+  #title-posts-section .title-text-bg h1, #list-posts-section .title-text-bg h1, #additional-posts-section .title-text-bg h1 {
+    padding: 20px 10px;
+  }
+}
+#title-posts-section .title-text-content, #list-posts-section .title-text-content, #additional-posts-section .title-text-content {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 44px;
+  color: #000000;
+}
+@media screen and (max-width: 575px) {
+  #title-posts-section .title-text-content, #list-posts-section .title-text-content, #additional-posts-section .title-text-content {
+    line-height: 35px;
+  }
+}
+
+#list-posts-section {
+  margin-top: 40px;
+}
+#list-posts-section .title-text-bg {
+  margin-top: 0;
+}
+#list-posts-section .list-group {
+  height: 400px;
+  overflow: auto;
+}
+#list-posts-section .list-group::-webkit-scrollbar-track {
+  background-color: #ecedee;
+}
+#list-posts-section .list-group::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #c3ccea;
+}
+#list-posts-section .list-group::-webkit-scrollbar-thumb:hover {
+  background-color: #95B6DE;
+  cursor: pointer;
+}
+#list-posts-section .list-group::-webkit-resizer {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0px;
+}
+#list-posts-section .list-group::-webkit-scrollbar {
+  width: 6px;
+}
+#list-posts-section .list-group::-webkit-scrollbar-button {
+  background: #c3ccea;
+  background-repeat: no-repeat;
+  color: #c3ccea;
+  width: 6px;
+  height: 0px;
+}
+#list-posts-section .list-group-item {
+  border: none;
+}
+#list-posts-section .rectangle {
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border: 1px solid #C3CCEA;
+}
+#list-posts-section .rectangle .number-of-list {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  color: #C3CCEA;
+  text-align: center;
+}
+#list-posts-section .title-list {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 44px;
+  color: #000;
+}
+#list-posts-section .title-list:hover {
+  text-decoration: none;
+  color: #007bff;
+}
+@media screen and (max-width: 767px) {
+  #list-posts-section .title-list {
+    font-size: 1rem;
+    line-height: 34px;
+  }
+}
+
+#additional-posts-section {
+  padding-bottom: 50px;
+}
+#additional-posts-section .title-block {
+  margin-top: 95px;
+}
+#additional-posts-section .links {
+  position: relative;
+  height: 195px;
+  margin: 0 20px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding: 23px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 767px) {
+  #additional-posts-section .links {
+    margin: 0;
+  }
+}
+#additional-posts-section .links:nth-child(1) {
+  background: #C3CCEA;
+}
+#additional-posts-section .links:nth-child(2) {
+  background: #EAC3C3;
+}
+#additional-posts-section .links:nth-child(3) {
+  background: #C3EADA;
+}
+@media screen and (max-width: 1199px) {
+  #additional-posts-section .links {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  #additional-posts-section .links {
+    font-size: 1.5rem;
+  }
+}
+#additional-posts-section .links:hover {
+  text-decoration: none;
+}
+#additional-posts-section .links .image-icon-block {
+  height: 55px;
+  width: 55px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+#additional-posts-section .links .image-icon-block img {
+  height: inherit;
+}
+
 /*# sourceMappingURL=style.css.map */

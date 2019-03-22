@@ -15,6 +15,8 @@ Route::get('/', 'PageController@index');
 Route::get('/news', 'PageController@newsList');
 Route::get('/news/{slug}', 'PageController@newsInner');
 
+Route::get('/post', 'PageController@postList');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
