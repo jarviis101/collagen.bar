@@ -13,6 +13,7 @@
 
 Route::get('/', 'PageController@index');
 Route::get('/news', 'PageController@newsList');
+Route::get('/news/{slug}', 'PageController@newsInner');
 
 
 Route::group(['prefix' => 'admin'], function () {

@@ -6,6 +6,7 @@ use App\Contact;
 use App\Category;
 use App\HomePageTitle;
 use App\Footer;
+use App\News;
 use App\HomePageContent;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,13 @@ class PageController extends Controller
     }
     public static function newsList()
     {
-        return view('news');
+        $news = News::orderBy('created_at')->get();
+        return view('news.news')->with('news', $news);
+    }
+    public static function newsInner($slug)
+    {
+        $news = News::where('slug', '=', $slug)->get();
+        return view('news.innerNews')->with('news', $news);
     }
     public static function getContacts()
     {
