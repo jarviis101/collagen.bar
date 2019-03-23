@@ -270,6 +270,7 @@
 }
 .navbar .container-fluid {
   justify-content: start;
+  max-width: 1440px;
 }
 @media screen and (max-width: 575px) {
   .navbar {
@@ -1286,6 +1287,9 @@
   height: 30px;
   width: 30px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #C3CCEA;
 }
 #list-posts-section .rectangle .number-of-list {

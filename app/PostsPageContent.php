@@ -4,12 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Postq extends Model
+class PostsPageContent extends Model
 {
-    protected $table = 'postqs';
+    protected $table = 'posts_page_contents';
     protected $primaryKey = 'id';
     public $timestamp = true;
-    
     protected $fillable = [
-        'slug', 'title', 'content'];
+        'header_text' ];
 }

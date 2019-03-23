@@ -15,6 +15,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/news">Новости</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/post">Темы</a>
+                </li>
             </ul>
             <div class="nav-list basket">
                 <a href="#"><i class="fas fa-shopping-basket"></i></a>

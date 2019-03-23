@@ -4,12 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Postq extends Model
+class PostsPageImage extends Model
 {
-    protected $table = 'postqs';
+    protected $table = 'posts_page_images';
     protected $primaryKey = 'id';
     public $timestamp = true;
-    
     protected $fillable = [
-        'slug', 'title', 'content'];
+        'image_1', 'image_2', 'image_3' ];
 }
