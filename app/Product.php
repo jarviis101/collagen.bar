@@ -10,10 +10,13 @@ class Product extends Model
     protected $primaryKey = 'id';
     public $timestamp = true;
     protected $fillable = [
-        'name','type','image','price','country','form_issue','material', 'slug', 'description', 'presence_of'];
+        'name','type','image',
+        'price','country','form_issue',
+        'material', 'slug', 'description', 
+        'presence_of','category_id', 'is_under_order', 'is_top_sales'];
 
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class, 'category_id');
     }
 }

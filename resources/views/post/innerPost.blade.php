@@ -4,14 +4,14 @@
     <div class="custom-block-menu">
         @include('partials.header')
     </div>
-    @foreach ($news as $item)	
+    @foreach ($post as $item)	
         <section class="container-fluid" id="inner-article-title-section">
-            <div class="bg-image-container">
-                <img src="{{ asset('storage/' . $item->image) }}" alt="">
-            </div>
+            <!--<div class="bg-image-container">
+                <img src="" alt="">
+            </div>-->
             <div class="container">
                 <div class="row justify-content-center">
-                    <h2 class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                    <h2 class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10" style="color: #000;">
                         {{$item->title}}
                     </h2>
                 </div>

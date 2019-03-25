@@ -12,11 +12,16 @@
 */
 
 Route::get('/', 'PageController@index');
+
 Route::get('/news', 'PageController@newsList');
 Route::get('/news/{slug}', 'PageController@newsInner');
 
 Route::get('/post', 'PageController@postList');
+Route::get('/post/{slug}', 'PageController@postInner');
 
+
+Route::get('/product', 'PageController@product');
+Route::get('/product/{slug}', 'PageController@productInner');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

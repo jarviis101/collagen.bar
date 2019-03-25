@@ -8,6 +8,7 @@ use App\HomePageTitle;
 use App\Footer;
 use App\News;
 use App\Postq;
+use App\Product;
 use App\HomePageContent;
 use Illuminate\Http\Request;
 
@@ -38,6 +39,25 @@ class PageController extends Controller
         $post = Postq::orderBy('created_at')->get();
         return view('post.post')->with('post', $post);
     }
+    public static function postInner($slug)
+    {
+        $post = Postq::where('slug', '=', $slug)->get();
+        return view('post.innerPost')->with('post', $post);
+    }
+
+    public static function product()
+    {
+        $product = Product::orderBy('created_at')->get();
+        return view('product.product')->with('product', $product);
+    }
+    
+    public static function productInner($slug)
+    {
+        $product = Product::where('slug', '=', $slug)->get();
+        return view('product.innerProduct')->with('product', $product);
+    }
+
+
 
     public static function getContacts()
     {

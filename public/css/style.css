@@ -57,6 +57,17 @@
   }
 }
 
+.img-product-block {
+  margin-top: 40px;
+  height: 162px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-product-block img {
+  height: inherit;
+}
+
 .button-nav {
   background: transparent;
   border: none;
@@ -270,7 +281,6 @@
 }
 .navbar .container-fluid {
   justify-content: start;
-  max-width: 1440px;
 }
 @media screen and (max-width: 575px) {
   .navbar {
@@ -1201,21 +1211,21 @@
   }
 }
 
-#title-posts-section, #list-posts-section, #additional-posts-section {
+#title-posts-section, #list-posts-section, #additional-posts-section, #news-section, #product-section {
   max-width: 1440px;
   margin-top: 85px;
 }
-#title-posts-section .title-block, #list-posts-section .title-block, #additional-posts-section .title-block {
+#title-posts-section .title-block, #list-posts-section .title-block, #additional-posts-section .title-block, #news-section .title-block, #product-section .title-block {
   background: url("../img/Component (4).png") no-repeat center top;
   background-position-y: 100px;
 }
-#title-posts-section .title-text-bg, #list-posts-section .title-text-bg, #additional-posts-section .title-text-bg {
+#title-posts-section .title-text-bg, #list-posts-section .title-text-bg, #additional-posts-section .title-text-bg, #news-section .title-text-bg, #product-section .title-text-bg {
   margin-top: 60px;
   background: url("../img/Rectangle 4.4.png") repeat-x center;
   background-position-x: 0px;
   background-repeat-x: inherit;
 }
-#title-posts-section .title-text-bg h1, #list-posts-section .title-text-bg h1, #additional-posts-section .title-text-bg h1 {
+#title-posts-section .title-text-bg h1, #list-posts-section .title-text-bg h1, #additional-posts-section .title-text-bg h1, #news-section .title-text-bg h1, #product-section .title-text-bg h1 {
   font-weight: 900;
   color: #fff;
   line-height: normal;
@@ -1225,11 +1235,11 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 @media screen and (max-width: 575px) {
-  #title-posts-section .title-text-bg h1, #list-posts-section .title-text-bg h1, #additional-posts-section .title-text-bg h1 {
+  #title-posts-section .title-text-bg h1, #list-posts-section .title-text-bg h1, #additional-posts-section .title-text-bg h1, #news-section .title-text-bg h1, #product-section .title-text-bg h1 {
     padding: 20px 10px;
   }
 }
-#title-posts-section .title-text-content, #list-posts-section .title-text-content, #additional-posts-section .title-text-content {
+#title-posts-section .title-text-content, #list-posts-section .title-text-content, #additional-posts-section .title-text-content, #news-section .title-text-content, #product-section .title-text-content {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: normal;
@@ -1237,7 +1247,7 @@
   color: #000000;
 }
 @media screen and (max-width: 575px) {
-  #title-posts-section .title-text-content, #list-posts-section .title-text-content, #additional-posts-section .title-text-content {
+  #title-posts-section .title-text-content, #list-posts-section .title-text-content, #additional-posts-section .title-text-content, #news-section .title-text-content, #product-section .title-text-content {
     line-height: 35px;
   }
 }
@@ -1287,9 +1297,6 @@
   height: 30px;
   width: 30px;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 1px solid #C3CCEA;
 }
 #list-posts-section .rectangle .number-of-list {
@@ -1375,6 +1382,132 @@
 }
 #additional-posts-section .links .image-icon-block img {
   height: inherit;
+}
+
+#product-section {
+  max-width: 1440px;
+}
+#product-section .products {
+  margin-top: 65px;
+}
+#product-section .products .card {
+  border: none;
+  margin-bottom: 35px;
+}
+#product-section .products .card .card-body {
+  padding: 0;
+}
+#product-section .products .card .card-title {
+  font-family: "Montserrat";
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: normal;
+  color: #000000;
+  text-align: center;
+}
+#product-section .products .card .card-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.775rem;
+  line-height: 18px;
+  height: 36px;
+}
+#product-section .products .card .instance-block, #product-section .products .card .instance-block-no {
+  border: 3px solid #C6EAC3;
+  box-sizing: border-box;
+  padding: 10px;
+}
+#product-section .products .card .instance-block .instance, #product-section .products .card .instance-block-no .instance {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.775rem;
+  line-height: normal;
+  margin-left: 10px;
+  color: #C6EAC3;
+}
+#product-section .products .card .instance-block i, #product-section .products .card .instance-block-no i {
+  font-size: 1.1rem;
+  color: #C6EAC3;
+}
+#product-section .products .card .instance-block-no {
+  border-color: #f57e7e;
+}
+#product-section .products .card .instance-block-no .instance {
+  color: #f57e7e;
+}
+#product-section .products .card .instance-block-no i {
+  color: #f57e7e;
+}
+#product-section .products .card .price-block {
+  border: 3px solid #8798D5;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#product-section .products .card .price-block .price {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  line-height: normal;
+  color: #8798D5;
+}
+#product-section .products .card .instance-block, #product-section .products .card .price-block, #product-section .products .card .under-order, #product-section .products .card .btn-custom {
+  height: 56px;
+}
+#product-section .products .card .order-row {
+  margin-top: 15px;
+}
+#product-section .products .card .order-row .btn-custom {
+  color: #fff;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#product-section .products .card .order-row .btn-custom:hover {
+  text-decoration: none;
+}
+#product-section .products .card .under-order {
+  border: 3px solid #FFB1B1;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.775rem;
+  line-height: normal;
+  color: #FFB1B1;
+}
+#product-section .products .card .reviews-block {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.8rem;
+  line-height: normal;
+  color: rgba(0, 0, 0, 0.5);
+}
+#product-section .products .card .reviews-block:hover {
+  text-decoration: none;
+}
+#product-section .top-of-sales {
+  background: #FFB1B1;
+  padding: 7px 16px;
+  color: #fff;
+  position: absolute;
 }
 
 /*# sourceMappingURL=style.css.map */
