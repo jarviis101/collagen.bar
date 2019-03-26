@@ -1510,4 +1510,35 @@
   position: absolute;
 }
 
+.filter .btn-custom {
+  border: none;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.filter .filter-block {
+  margin-bottom: 20px;
+}
+.filter .titles-filter {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: normal;
+  color: #000000;
+}
+.filter .custom-control-label {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #8798D5;
+}
+.filter .divider {
+  display: flex;
+  align-items: center;
+}
+.filter .form-group {
+  margin-bottom: 0;
+}
 /*# sourceMappingURL=style.css.map */

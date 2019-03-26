@@ -23,6 +23,9 @@ Route::get('/post/{slug}', 'PageController@postInner');
 Route::get('/product', 'PageController@product');
 Route::get('/product/{slug}', 'PageController@productInner');
 
+
+Route::get('/filter', 'ProductController@filter');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

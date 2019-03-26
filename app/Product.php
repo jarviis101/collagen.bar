@@ -15,6 +15,7 @@ class Product extends Model
         'material', 'slug', 'description', 
         'presence_of','category_id', 'is_under_order', 'is_top_sales'];
 
+
     public function category()
     {
         return $this->belongsTo(Category::class, 'category_id');

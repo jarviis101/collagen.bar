@@ -13,8 +13,8 @@ $(document).ready(function(){
 				arrows: false
 			}
 		}],
-    });
-    $('.type-of-slider').slick({
+  });
+  $('.type-of-slider').slick({
     	slidesToShow: 2,
 		slidesToScroll: 1,
 		dots: false,
@@ -49,8 +49,7 @@ $(document).ready(function(){
 		easing: 'linear',  
 		prevArrow: ('#index-products-section .slick-prev'),
 		nextArrow: ('#index-products-section .slick-next')
-    });
-
+  });
 	$('.services-slider').slick({
 		dots: false,
 		draggable: true,
@@ -101,7 +100,8 @@ $(document).ready(function(){
 		draggable: true,  
 		prevArrow: ('#index-services-section .slick-prev'),
 		nextArrow: ('#index-services-section .slick-next')
-    });
+	});
+	
     
 
 
