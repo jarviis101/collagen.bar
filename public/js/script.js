@@ -13,8 +13,8 @@ $(document).ready(function(){
 				arrows: false
 			}
 		}],
-  });
-  $('.type-of-slider').slick({
+    });
+    $('.type-of-slider').slick({
     	slidesToShow: 2,
 		slidesToScroll: 1,
 		dots: false,
@@ -49,7 +49,7 @@ $(document).ready(function(){
 		easing: 'linear',  
 		prevArrow: ('#index-products-section .slick-prev'),
 		nextArrow: ('#index-products-section .slick-next')
-  });
+    });
 	$('.services-slider').slick({
 		dots: false,
 		draggable: true,
@@ -100,19 +100,24 @@ $(document).ready(function(){
 		draggable: true,  
 		prevArrow: ('#index-services-section .slick-prev'),
 		nextArrow: ('#index-services-section .slick-next')
+    });
+    
+
+	$('#btn-filt').on('click', function(e)
+	{
+		e.preventDefault();
+		$('#filter-form').slideToggle("slow");
 	});
-	
-    
 
 
-    
-/*    var menu = $("#menu");
-  	$(window).scroll(function() {
-   		var top = $(this).scrollTop();
-    	if ( top <= 560 ) {
-      		menu.css({'background':'rgba(0,0,0, .2)'});
-	    } else if ( top >= 660 ) {
-			menu.css({'background':'red'});
-		}
-  	});*/
+	$('#submit').on('click', function(event){
+		event.preventDefault();
+		$.ajaxSetup({
+			cache: true
+		});
+		$.get('/filter?' + $('#filter-form').serialize(), function(data)
+		{
+			$('#data-products').html(data);
+		});
+	});
 });

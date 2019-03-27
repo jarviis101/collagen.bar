@@ -18,6 +18,10 @@ $montserrat: 'Montserrat'
 .collapsing, .show
 	display: flex 
 	align-items: center
+	@media screen and (min-width: 1200px)
+		width: 64%
+		justify-content: space-between
+
 	@media screen and (max-width: 767px)
 		position: absolute
 		bottom: -20px
@@ -31,9 +35,12 @@ $montserrat: 'Montserrat'
 
 
 
+
 #menu
 	position: fixed
 	z-index: 999
+	@media screen and (min-width: 1200px)
+		width: 100%
 	i.fas
 		font-size: 36px
 		color: #fff
@@ -42,6 +49,15 @@ $montserrat: 'Montserrat'
 			color: #6087c2 !important
 		@media screen and (max-width: 575px)
 			font-size: 25px
+
+
+.img-product-block
+	height: 162px
+	display: flex
+	align-items: center
+	justify-content: center
+	img
+		height: inherit
 
 .button-nav
 	background: transparent
@@ -52,8 +68,8 @@ $montserrat: 'Montserrat'
 	font-weight: bold
 	line-height: normal
 	text-transform: uppercase
-	margin-top: 29px
-	margin-bottom: 29px
+	margin-top: 10px
+	margin-bottom: 10px
 	color: #fff
 	font-size: 2rem
 	transition: color 0.25s
@@ -114,11 +130,19 @@ $montserrat: 'Montserrat'
 		position: static
 		display: flex
 
-
+.custom-block-menu
+	background: #C3CCEA
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 999
+	#menu
+		position: static
 
 #index-title-section
 	position: relative
 	
+
 	.sliders-arrows
 		position: absolute
 		display: flex
@@ -202,6 +226,8 @@ $montserrat: 'Montserrat'
 	position: absolute
 	top: 0
 	z-index: 999
+	.container-fluid
+		justify-content: start
 	@media screen and (max-width: 575px)
 		width: 100%
 		>.container-fluid
@@ -333,6 +359,11 @@ $montserrat: 'Montserrat'
 		font-style: normal
 		font-size: 2rem
 		font-weight: normal
+		@media screen and (max-width: 991px)
+			font-size: 1.6rem
+		@media screen and (max-width: 575px)
+			text-align: center
+			font-size: 1.2rem
 
 	.subtitle
 		color: #000
@@ -341,6 +372,9 @@ $montserrat: 'Montserrat'
 		font-style: normal
 		font-size: 1.3rem
 		font-weight: bold
+		@media screen and (max-width: 575px)
+			margin-left: 0
+			font-size: 0.7rem
 		
 	.sliders-arrows
 		position: absolute
@@ -374,9 +408,16 @@ $montserrat: 'Montserrat'
 				transition: all 0.5s ease
 				color: #007bff
 
+	.slider-item
+		@media screen and (max-width: 991px)
+			margin: 0 10px
+			
+
 	.product
 		position: relative
 		height: 410px
+		@media screen and (max-width: 767px)
+			height: 310px
 
 	.img-product-block
 		display: flex
@@ -388,6 +429,15 @@ $montserrat: 'Montserrat'
 		height: 100%
 		img
 			height: inherit
+
+		@media screen and (max-width: 991px)
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			width: 100%
+			img
+				width: 100%
 	
 	.name-of-type
 		position: absolute
@@ -404,6 +454,11 @@ $montserrat: 'Montserrat'
 		&:hover
 			text-decoration: none
 			color: #007bff
+		@media screen and (max-width: 991px)
+			padding: 26px 38px
+		@media screen and (max-width: 767px)
+			top: 130px
+			text-align: center
 
 	.type-of-slider
 		display: flex
@@ -415,13 +470,18 @@ $montserrat: 'Montserrat'
 	padding-top: 50px
 	padding-bottom: 60px
 
-	.title
+	.title	
 		color: #fff
 		text-transform: uppercase
 		font-family: $montserrat
 		font-style: normal
 		font-size: 2rem
 		font-weight: normal
+		@media screen and (max-width: 991px)
+			font-size: 1.6rem
+		@media screen and (max-width: 575px)
+			text-align: center
+			font-size: 1.2rem
 
 	.subtitle
 		color: #000
@@ -430,6 +490,9 @@ $montserrat: 'Montserrat'
 		font-style: normal
 		font-size: 1.3rem
 		font-weight: bold
+		@media screen and (max-width: 575px)
+			margin-left: 0
+			font-size: 0.7rem
 	
 	.sliders-arrows
 		position: absolute
@@ -462,10 +525,15 @@ $montserrat: 'Montserrat'
 			i.fas
 				transition: all 0.5s ease
 				color: #007bff
+	.slider-item
+		@media screen and (max-width: 991px)
+			margin: 0 10px
 
 	.product
 		position: relative
 		height: 410px
+		@media screen and (max-width: 767px)
+			height: 310px
 
 	.img-product-block
 		display: flex
@@ -477,6 +545,15 @@ $montserrat: 'Montserrat'
 		height: 100%
 		img
 			height: inherit
+
+		@media screen and (max-width: 991px)
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			width: 100%
+			img
+				width: 100%
 	
 	.name-of-type
 		position: absolute
@@ -493,6 +570,11 @@ $montserrat: 'Montserrat'
 		&:hover
 			text-decoration: none
 			color: #007bff
+		@media screen and (max-width: 991px)
+			padding: 26px 38px
+		@media screen and (max-width: 767px)
+			top: 130px
+			text-align: center
 
 	.services-slider
 		display: flex
@@ -509,6 +591,9 @@ $montserrat: 'Montserrat'
 
 .mt-100px
 	margin-top: 100px
+	@media screen and (max-width: 575px)
+		margin-top: 30px
+
 .h-712px
 	height: 712px
 	@media screen and (max-width: 1199px)
@@ -552,6 +637,8 @@ $montserrat: 'Montserrat'
 			font-size: 30px
 			&:hover
 				color: #007bff
+			@media screen and (max-width: 1199px)
+				font-size: 22px
 
 	.conference
 		p
@@ -569,11 +656,616 @@ $montserrat: 'Montserrat'
 			font-size: 14px
 			line-height: 26px
 			color: #707AFE
+			@media screen and (max-width: 1199px)
+				font-size: 13px
+
 		.tel-link
 			font-family: $montserrat
 			font-style: normal
 			font-weight: 500
 			font-size: 18px
 			line-height: 33px
-
 			color: #000000
+			@media screen and (max-width: 1199px)
+				font-size: 17px
+			&:hover
+				transition: all 0.4s ease
+				text-decoration: none
+				color: #707AFE
+
+#news-section
+	margin-top: 110px
+	margin-bottom: 150px
+	padding-bottom: 110px
+	background: url('../img/Component (4).png') no-repeat center top
+	background-position-y: 100px
+	@media screen and (max-width: 575px)
+		padding-bottom: 0
+		margin-bottom: 50px
+		background: none
+	.title-text
+		margin-bottom: 0
+	.title-text-bg
+		margin-top: 60px
+		background: url('../img/Rectangle 4.4.png') repeat-x center
+		background-position-x: 0px
+		background-repeat-x: inherit
+
+		h1
+			font-weight: 900
+			line-height: normal
+			padding: 20px 60px
+			text-align: center
+			text-transform: uppercase
+			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+			@media screen and (max-width: 575px)
+				padding: 20px 10px
+
+	#carousel-thumb
+		margin-top: 50px
+
+		.carousel-inner
+			@media screen and (max-width: 767px)
+				width: 70%
+			@media screen and (max-width: 575px)
+				width: 100%
+
+	.date-time
+		font-family: $roboto
+		font-style: normal
+		font-weight: 300
+		font-size: 14px
+		line-height: normal
+		text-transform: lowercase
+		color: #95B6DE
+		@media screen and (max-width: 575px)
+			text-align: center
+
+	.carousel-item
+		.slide-h4
+			font-family: $roboto
+			font-style: normal
+			font-weight: 900
+			font-size: 1.5rem
+			color: #000
+			&:hover
+				text-decoration: none
+				color: #007bff
+			line-height: normal
+			text-transform: capitalize
+			@media screen and (max-width: 575px)
+				text-align: center
+				font-size: 1.2rem
+
+		
+
+		.line
+			margin-bottom: 25px
+
+		p
+			font-family: $roboto
+			line-height: 30px
+			font-style: normal
+			font-weight: 300
+			height: 180px
+			overflow: auto
+
+			&::-webkit-scrollbar-track 
+				background-color: #ecedee
+
+			&::-webkit-scrollbar-thumb 
+				-webkit-border-radius: 5px
+				border-radius: 5px
+				background-color: #c3ccea
+
+			&::-webkit-scrollbar-thumb:hover
+				background-color: #95B6DE
+				cursor: pointer
+
+			&::-webkit-resizer
+				background-image: url('')
+				background-repeat: no-repeat
+				width: 5px
+				height: 0px
+			&::-webkit-scrollbar
+				width: 6px
+
+			&::-webkit-scrollbar-button 
+				background: #c3ccea
+				background-repeat: no-repeat
+				color: #c3ccea
+				width: 6px
+				height: 0px
+
+
+			@media screen and (max-width: 575px)
+				text-align: left
+				line-height: 23px
+				font-size: 0.8rem
+
+		.slider-text-descr
+			@media screen and (max-width: 575px)
+				margin-top: 10px
+
+
+		
+
+	.img-slider-block
+		height: 330px
+		@media screen and (max-width: 767px)
+			height: 220px
+			display: flex
+			justify-content: center
+		@media screen and (max-width: 575px)
+			height: 150px
+
+		img
+			display: flex
+			height: initial
+			width: 100%
+			justify-content: center
+			align-items: center
+			@media screen and (max-width: 767px)
+				width: 90%
+				height: inherit
+			@media screen and (max-width: 991px)
+				height: auto
+			@media screen and (max-width: 575px)
+				width: auto
+			
+
+
+	.next-block, .prev-block
+		width: 50px
+		height: 50px
+		display: flex
+		justify-content: center
+		align-self: center
+		align-items: center
+		border-radius: 50%
+		background-color: #C3CCEA
+		color: #fff
+
+		@media screen and (max-width: 1199px)
+			width: 40px
+			height: 40px
+
+		@media screen and (max-width: 991px)
+			width: 30px
+			height: 30px
+			i
+				font-size: 20px
+		@media screen and (max-width: 575px)
+			width: 23px
+			height: 23px
+			i
+				font-size: 14px
+
+	.carousel-indicators
+		bottom: -40px
+		li
+			margin: 0 20px
+			width: 300px
+			@media screen and (max-width: 767px)
+				width: 150px
+				font-size: 1rem
+		@media screen and (max-width: 575px)
+			display: none
+
+		.slide-h4-indc
+			color: #000
+			text-indent: 0px
+			font-size: 1.3rem
+			@media screen and (max-width: 767px)
+				font-size: 1rem
+
+	.carousel-control-prev
+		opacity: 1
+		width: 5%
+		left: -5%
+		&:hover
+			.next-block
+				opacity: 0.6
+		@media screen and (max-width: 767px)
+			width: 10%
+			left: -10%
+		@media screen and (max-width: 575px)
+			left: -10%
+
+
+	.carousel-control-next
+		opacity: 1
+		width: 5%
+		right: -5%
+		&:hover
+			.next-block
+				opacity: 0.6
+		@media screen and (max-width: 767px)
+			width: 10%
+			right: -10%
+		@media screen and (max-width: 575px)
+			right: -10%
+#inner-article-title-section
+	margin-top: 85px
+	padding-top: 35px
+	position: relative
+	@media screen and (max-width: 575px)
+		margin-top: 70px
+	h2
+		text-align: left
+		font-family: $montserrat
+		font-style: normal
+		color: #fff
+		font-size: 4rem
+		font-weight: 900
+		line-height: 50px
+		text-transform: uppercase
+		text-shadow: 4px 3px 3px #E4DCD7
+		@media screen and (max-width: 767px)
+			text-align: center
+			font-size: 3rem
+		@media screen and (max-width: 575px)
+			font-size: 2rem
+
+	.bg-image-container
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		img
+			height: inherit
+	i.fas
+		font-size: 2.5rem
+		color: #fff
+	.date
+		background: #C3CCEA
+		margin-top: 20px
+		margin-left: 15px
+		margin-bottom: 20px
+		.date-time
+			padding: 18px 0 18px 0
+			font-family: $roboto
+			font-style: normal
+			font-weight: 300
+			font-size: 1.175rem
+			line-height: normal
+			color: #FFFFFF
+
+#article-content-section
+	padding-top: 70px	
+	padding-bottom: 80px		
+	.content
+		font-family: $roboto
+		font-style: normal
+		font-weight: 300
+		font-size: 1.2rem
+		line-height: 56px
+		color: rgba(0, 0, 0, 0.7)
+		@media screen and (max-width: 767px)
+			line-height: 40px
+
+#title-posts-section, #list-posts-section, #additional-posts-section, #news-section, #product-section
+	max-width: 1440px
+	margin-top: 85px
+	.title-block
+		background: url('../img/Component (4).png') no-repeat center top
+		background-position-y: 100px
+
+	.title-text-bg
+		margin-top: 60px
+		background: url('../img/Rectangle 4.4.png') repeat-x center
+		background-position-x: 0px
+		background-repeat-x: inherit
+		h1
+			font-weight: 900
+			color: #fff
+			line-height: normal
+			padding: 20px 60px
+			text-align: center
+			text-transform: uppercase
+			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+			@media screen and (max-width: 575px)
+				padding: 20px 10px
+
+	.title-text-content
+		font-family: $montserrat
+		font-style: normal
+		font-weight: normal
+		line-height: 44px
+		color: #000000
+		@media screen and (max-width: 575px)
+			line-height: 35px
+
+#list-posts-section
+	margin-top: 40px
+	.title-text-bg
+		margin-top: 0
+	.list-group
+		height:400px
+		overflow: auto
+		&::-webkit-scrollbar-track 
+			background-color: #ecedee
+
+		&::-webkit-scrollbar-thumb 
+			-webkit-border-radius: 5px
+			border-radius: 5px
+			background-color: #c3ccea
+
+		&::-webkit-scrollbar-thumb:hover
+			background-color: #95B6DE
+			cursor: pointer
+
+		&::-webkit-resizer
+			background-image: url('')
+			background-repeat: no-repeat
+			width: 5px
+			height: 0px
+
+		&::-webkit-scrollbar
+			width: 6px
+
+		&::-webkit-scrollbar-button 
+			background: #c3ccea
+			background-repeat: no-repeat
+			color: #c3ccea
+			width: 6px
+			height: 0px
+
+
+	.list-group-item
+		border: none
+	.rectangle
+		height: 30px
+		width: 30px
+		text-align: center
+		border: 1px solid #C3CCEA
+		.number-of-list
+			font-family: $montserrat
+			font-style: normal
+			font-weight: normal
+			font-size: 1.125rem
+			color: #C3CCEA
+			text-align: center
+
+	.title-list
+		font-family: $montserrat
+		font-style: normal
+		font-weight: normal
+		font-size: 1.125rem
+		line-height: 44px
+		color: #000
+		&:hover
+			text-decoration: none
+			color: #007bff
+		@media screen and (max-width: 767px)
+			font-size: 1rem
+			line-height: 34px
+
+#additional-posts-section
+	padding-bottom: 50px
+	.title-block
+		margin-top: 95px
+	.links
+		position: relative
+		height: 195px
+		margin: 0 20px
+		@media screen and (max-width: 767px)
+			margin: 0
+
+		&:nth-child(1)
+			background: #C3CCEA
+		&:nth-child(2)
+			background: #EAC3C3
+		&:nth-child(3)
+			background: #C3EADA
+			
+	
+		font-family: $montserrat
+		font-style: normal
+		font-weight: 900
+		font-size: 1.2rem
+		@media screen and (max-width: 1199px)
+			font-size: 0.9rem
+		@media screen and (max-width: 575px)
+			font-size: 1.5rem
+		padding: 23px
+		text-transform: uppercase
+		color: #FFFFFF
+		&:hover
+			text-decoration: none
+	
+
+		.image-icon-block
+			height: 55px
+			width: 55px
+			position: absolute
+			bottom: 10px
+			right: 10px
+			display: flex
+			align-items: center
+			img
+				height: inherit
+
+#product-section
+	max-width: 1440px
+	.products
+		margin-top: 65px
+		.card
+			border: none
+			.card-body
+				padding: 0
+
+			.card-title
+				font-family: $montserrat
+				font-style: normal
+				font-weight: normal
+				font-size: 	1.125rem
+				line-height: normal
+				color: #000000
+				text-align: center
+
+			.card-text
+				font-family: $montserrat
+				font-style: normal
+				font-weight: normal
+				font-size: 0.775rem
+				line-height: 18px
+				height: 36px
+
+
+			.instance-block, .instance-block-no
+				border: 3px solid #C6EAC3
+				box-sizing: border-box
+				padding: 10px
+				.instance
+
+					font-family: $montserrat
+					font-style: normal
+					font-weight: bold
+					font-size: 0.775rem
+					line-height: normal
+					margin-left: 10px
+
+					color: #C6EAC3
+				i
+					font-size: 1.1rem
+					color: #C6EAC3
+
+			.instance-block-no
+				border-color: #f57e7e
+				.instance
+					color: #f57e7e
+				i
+					color: #f57e7e
+
+			.price-block
+				border: 3px solid #8798D5
+				box-sizing: border-box
+				padding: 10px
+				display: flex
+				align-items: center
+				justify-content: center
+				.price
+					font-family: $montserrat
+					font-style: normal
+					font-weight: normal
+					font-size: 1.1rem
+					line-height: normal
+
+					color: #8798D5
+
+			.instance-block, .price-block, .under-order, .btn-custom
+				height: 56px
+
+			.order-row
+				margin-top: 15px
+				.btn-custom
+					color: #fff
+					margin-bottom: 0
+					padding-top: 10px
+					padding-bottom: 10px
+					display: flex
+					align-items: center
+					justify-content: center
+					&:hover
+						text-decoration: none
+						transform: translateY(0px)
+
+
+			.under-order
+				border: 3px solid #FFB1B1
+				box-sizing: border-box
+				padding: 10px
+				display: flex
+				align-items: center
+				justify-content: center
+				font-family: $montserrat
+				font-style: normal
+				font-weight: bold
+				font-size: 0.775rem
+				line-height: normal
+
+				color: #FFB1B1
+			.reviews-block
+				margin-top: 5px
+				margin-bottom: 5px
+				font-family: $montserrat
+				font-style: normal
+				font-weight: normal
+				font-size: 1.1rem
+				line-height: normal
+				color: rgba(0,0,0, .5)
+
+				&:hover
+					text-decoration: none
+
+.top-row
+	height: 38px
+
+	.top-of-sales
+		background: #FFB1B1
+		padding: 7px 16px
+		color: #fff
+	
+.pos-r
+	position: relative
+.filter
+	@media screen and (max-width: 575px)
+		display: none
+	.btn-custom
+		border: none
+		color: #fff
+		padding-top: 10px
+		padding-bottom: 10px
+		margin-bottom: 0
+		&:hover
+			text-decoration: none
+			transform: translateY(0px)
+		@media screen and (max-width: 767px)
+			margin-top: 27px
+			padding-left: 10px
+			padding-right: 10px
+
+	.filter-block
+		margin-bottom: 20px
+		@media screen and (max-width: 767px)
+			display: flex
+			flex-direction: column
+	.titles-filter
+		font-family: $montserrat
+		font-style: normal
+		font-weight: normal
+		font-size: 1rem
+		line-height: normal
+		color: #000000
+	.custom-control-label
+		font-family: $montserrat
+		font-style: normal
+		font-weight: normal
+		font-size: 1rem
+		color: #8798D5
+	.divider
+		display: flex
+		align-items: center
+	.form-group
+		margin-bottom: 0
+.btn-no-margin
+	border: none
+	color: #fff
+	padding-top: 10px
+	padding-bottom: 10px
+	text-align: center
+	width: 70%
+	margin: 0 auto
+	margin-bottom: 20px
+	align-items: center
+	justify-content: center
+	i.fas
+		margin-left: 10px
+	&:hover
+		box-shadow: none
+		transform: translateY(0)

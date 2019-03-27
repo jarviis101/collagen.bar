@@ -1,7 +1,7 @@
 <div class="row justify-content-start products">
     @foreach ($product as $item)
-        <div class="card col-xl-4">
-            <div class="row justify-content-end">
+        <div class="card col-12 col-sm-6 col-md-6 col-lg-5 col-xl-4">
+            <div class="row justify-content-end top-row">
                 @if($item->is_top_sales == 'rd1')
                     <span class="top-of-sales">Топ продаж</span>
                 @endif
@@ -14,14 +14,14 @@
                 <p class="card-text">{{ str_limit($item->description, $limit = 75, $end="...") }}</p>
                 <div class="d-flex align-items-center justify-content-between">
                     @if( $item->presence_of == 'radio1')
-                        <div class="col-5 instance-block">
+                        <div class="col-5 col-sm-5 col-md-6 col-lg-5 col-xl-5 instance-block">
                             <div class="d-flex align-items-center justify-content-around">
                                 <i class="fas fa-check"></i>
                                 <span class="instance">Есть в наличии</span>
                             </div>
                         </div>
                     @else
-                        <div class="col-5 instance-block-no">
+                        <div class="col-5 col-sm-5 col-md-6 col-lg-5 col-xl-5 instance-block-no">
                             <div class="d-flex align-items-center justify-content-around">
                                 <i class="fas fa-times"></i>
                                 <span class="instance">Нету в наличии</span>

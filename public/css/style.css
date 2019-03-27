@@ -58,7 +58,6 @@
 }
 
 .img-product-block {
-  margin-top: 40px;
   height: 162px;
   display: flex;
   align-items: center;
@@ -1392,14 +1391,12 @@
 }
 #product-section .products .card {
   border: none;
-  margin-bottom: 35px;
 }
 #product-section .products .card .card-body {
   padding: 0;
 }
 #product-section .products .card .card-title {
   font-family: "Montserrat";
-  margin-top: 20px;
   font-style: normal;
   font-weight: normal;
   font-size: 1.125rem;
@@ -1475,6 +1472,7 @@
 }
 #product-section .products .card .order-row .btn-custom:hover {
   text-decoration: none;
+  transform: translateY(0px);
 }
 #product-section .products .card .under-order {
   border: 3px solid #FFB1B1;
@@ -1496,28 +1494,58 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: normal;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   line-height: normal;
   color: rgba(0, 0, 0, 0.5);
 }
 #product-section .products .card .reviews-block:hover {
   text-decoration: none;
 }
-#product-section .top-of-sales {
+
+.top-row {
+  height: 38px;
+}
+.top-row .top-of-sales {
   background: #FFB1B1;
   padding: 7px 16px;
   color: #fff;
-  position: absolute;
 }
 
+.pos-r {
+  position: relative;
+}
+
+@media screen and (max-width: 575px) {
+  .filter {
+    display: none;
+  }
+}
 .filter .btn-custom {
   border: none;
   color: #fff;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-bottom: 0;
+}
+.filter .btn-custom:hover {
+  text-decoration: none;
+  transform: translateY(0px);
+}
+@media screen and (max-width: 767px) {
+  .filter .btn-custom {
+    margin-top: 27px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 .filter .filter-block {
   margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .filter .filter-block {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .filter .titles-filter {
   font-family: "Montserrat";
@@ -1541,4 +1569,25 @@
 .filter .form-group {
   margin-bottom: 0;
 }
+
+.btn-no-margin {
+  border: none;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.btn-no-margin i.fas {
+  margin-left: 10px;
+}
+.btn-no-margin:hover {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
 /*# sourceMappingURL=style.css.map */
