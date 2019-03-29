@@ -20,7 +20,8 @@ Route::get('/post', 'PageController@postList');
 Route::get('/post/{slug}', 'PageController@postInner');
 
 
-Route::get('/product', 'PageController@product');
+Route::get('/products', 'PageController@product');
+Route::get('/products/{id}', 'PageController@category');
 Route::get('/product/{slug}', 'PageController@productInner');
 
 

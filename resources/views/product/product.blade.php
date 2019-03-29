@@ -1,17 +1,14 @@
 @extends('layouts.main')
 @section('title', 'Товары')
-	@php
-		
-	@endphp
 @section('content')
     <div class="custom-block-menu">
         @include('partials.header')
-    </div>
+	</div>
     <section class="container-fluid" id="product-section">
 		<div class="col-12 title-block">
 			<div class="row justify-content-center">
 				<div class="title-text-bg">
-					<h1>Коллаген</h1>
+					<h1>{{ $name }}</h1>
 				</div>
 			</div>
 		</div>

@@ -28,7 +28,7 @@
 					</div>
 					<div class="row justify-content-start">
 						@foreach ($category as $item)
-							<a href="/{{ $item->slug }}" class="nav-link col-12">{{ $item->name }}</a>
+							<a href="/products/{{ $item->category_id }}" class="nav-link col-12">{{ $item->name }}</a>
 						@endforeach
 					</div>
 				</div>

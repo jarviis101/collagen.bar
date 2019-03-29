@@ -105,7 +105,7 @@
 			<div class="slider-item">
 				<div class="col-xl-12 product">
 				    <div class="img-product-block">
-						<a href="/{{$item->slug}}" class="name-of-type"><span>{{ $item->name }}</span></a>
+						<a href="/products/{{$item->category_id}}" class="name-of-type"><span>{{ $item->name }}</span></a>
 						<img src="{{ asset('storage/' . $item->image) }}" alt="">
 					</div>
 				</div>
@@ -166,14 +166,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="slider-item">
-				<div class="col-xl-12 product">
-					<div class="img-product-block">
-						<a href="#" class="name-of-type"><span>Косметика с коллагеном</span></a>
-						<img src="img/product(2).png" alt="">
-					</div>
-				</div>
-			</div>		
 			<div class="slider-item">
 				<div class="col-xl-12 product">
 					<div class="img-product-block">

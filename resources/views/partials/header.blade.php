@@ -10,7 +10,7 @@
                     <a class="nav-link" href="/">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/product">Каталог</a>
+                    <a class="nav-link" href="/products">Каталог</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/news">Новости</a>

@@ -48,7 +48,18 @@ class PageController extends Controller
     public static function product()
     {
         $product = Product::orderBy('created_at')->get();
-        return view('product.product')->with('product', $product);
+        $name = "Все товары";
+        $category_id = 4;
+        return view('product.product')->with('product', $product)->with('name', $name)->with('category_id', $category_id);
+    }
+
+    public static function category($id)
+    {
+        $product = Product::where('category_id', '=', $id)->get();
+        $category = Category::where('category_id', $id)->first();
+        $name = $category->name;
+        $category_id = $category->category_id;
+        return view('product.product')->with('product', $product)->with('name', $name)->with('category_id', $category_id);
     }
     
     public static function productInner($slug)
