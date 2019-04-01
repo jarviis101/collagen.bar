@@ -7,6 +7,9 @@ use App\Category;
 use App\HomePageTitle;
 use App\Footer;
 use App\News;
+use App\Collagen;
+use App\HairCare;
+use App\MediaProduct;
 use App\Postq;
 use App\Product;
 use App\HomePageContent;
@@ -55,17 +58,33 @@ class PageController extends Controller
 
     public static function category($id)
     {
-        $product = Product::where('category_id', '=', $id)->get();
+        if($id == 1)
+        {
+            $product = HairCare::where('category_id', '=', $id)->get();
+        }
+        if($id == 3)
+        {
+            $product = Collagen::where('category_id', '=', $id)->get();
+        }
         $category = Category::where('category_id', $id)->first();
         $name = $category->name;
         $category_id = $category->category_id;
         return view('product.product')->with('product', $product)->with('name', $name)->with('category_id', $category_id);
     }
     
-    public static function productInner($slug)
+    public static function productInner($id, $slug)
     {
-        $product = Product::where('slug', '=', $slug)->get();
-        return view('product.innerProduct')->with('product', $product);
+        if($id == 1)
+        {
+            $product = HairCare::where('slug', '=', $slug)->first();
+        }
+        if($id == 3)
+        {
+            $product = Collagen::where('slug', '=', $slug)->first();
+        }
+        $id = $product->product_id;
+        $photos = MediaProduct::where('product', '=', $id)->first();
+        return view('product.innerProduct')->with('product', $product)->with('photos', $photos);
     }
 
 

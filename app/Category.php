@@ -11,10 +11,4 @@ class Category extends Model
     protected $primaryKey = 'id';
     public $timestamp = true;
     protected $fillable = ['slug', 'name', 'image'];
-
-    public function products()
-    {
-        return $this->hasMany(Product::class)
-            ->orderBy('created_at', 'DESC');
-    }
 }

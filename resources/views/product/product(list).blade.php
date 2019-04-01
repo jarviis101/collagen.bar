@@ -6,9 +6,9 @@
                     <span class="top-of-sales">Топ продаж</span>
                 @endif
             </div>
-            <div class="img-product-block">
+            <a href="/product/{{$item->category_id}}/{{$item->slug}}" class="img-product-block">
                 <img src="{{ asset('storage/' . $item->image) }}">
-            </div>
+            </a>
             <div class="card-body">
                 <h5 class="card-title">{{$item->name}}</h5>
                 <p class="card-text">{{ str_limit($item->description, $limit = 75, $end="...") }}</p>

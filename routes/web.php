@@ -22,7 +22,7 @@ Route::get('/post/{slug}', 'PageController@postInner');
 
 Route::get('/products', 'PageController@product');
 Route::get('/products/{id}', 'PageController@category');
-Route::get('/product/{slug}', 'PageController@productInner');
+Route::get('/product/{id}/{slug}', 'PageController@productInner');
 
 
 Route::get('/filter', 'ProductController@filter');
