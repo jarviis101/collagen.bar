@@ -28,6 +28,9 @@ Route::get('/product/{id}/{slug}', 'PageController@productInner');
 Route::post('/filter_collagen', 'ProductController@filterCollagen');
 Route::post('/filter_hairCare', 'ProductController@filterHairCare');
 
+
+Route::get('/add-to-cart/{categoryId}/{id}', 'ProductController@getAddToCart');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

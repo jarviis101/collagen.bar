@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="d-flex order-row justify-content-between">
-                    <a class="btn-custom col-6" href="#">
+                    <a class="btn-custom col-6 ajax-btn" href="/add-to-cart/{{$item->category_id}}/{{$item->id}}">
                         Купить
                     </a>
                     @if($item->is_under_order == 'rd1')

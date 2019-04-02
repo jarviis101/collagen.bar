@@ -150,5 +150,29 @@ $(document).ready(function(){
 			}
 		});
 	});
+	// $('.ajax-btn').on('click', function(event)
+	// {
+	// 	event.preventDefault();
+	// 	$.ajaxSetup({
+	// 		cache: true,
+	// 		headers: {
+  //       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  //   	}
+	// 	});
+	// 	//var page = $(this).attr('href').split('add-to-cart/')[1];
+	// 	var data = {
+	// 		'categoryId' : 3,
+	// 		'id' : 1
+	// 	}
+	// 	$.ajax({
+	// 		url: '/add-to-cart',
+	// 		type: 'POST',
+	// 		data: data,
+	// 		success: function(data)
+	// 		{
+	// 			console.log('good)');
+	// 		}
+	// 	});
+	// });
 	$("#tabs").tabs();
 });

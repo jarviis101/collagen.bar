@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Collagen;
 use App\HairCare;
+use Session;
+use App\Cart;
+use Illuminate\Http\Request as HttpReq;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Input;
 use Request;
@@ -89,5 +92,22 @@ class ProductController extends Controller
             return view('product.product(list)')->with('product', $product);
         }
         return view('product.product')->with('product', $product);
+    }
+
+    public function getAddToCart(HttpReq $request, $categoryId, $id){
+        if($categoryId == 1)
+        {
+            $product = HairCare::find($id);
+        }
+        if($categoryId == 3)
+        {
+            $product = Collagen::find($id);
+        }
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->add($product, $product->id);
+        
+        $request->session()->put('cart', $cart);
+        return redirect()->back();
     }
 }
