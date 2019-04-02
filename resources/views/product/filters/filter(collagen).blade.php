@@ -2,18 +2,19 @@
 d-sm-none d-md-none d-lg-none d-xl-none" 
 id="btn-filt">Фильтры <i class="fas fa-filter"></i></button>
 
-<form method="GET" action="/filter" class="filter row" id="filter-form">
+<form method="POST" action="/filter_collagen" class="filter row" id="filter-form-coll">
+    {{-- {{ csrf_field() }} --}}
     <div class="col-12 col-sm-4 col-md-12 col-lg-12 col-xl-12 filter-block">
         <div class="row">
             <h5 class="titles-filter">Типы коллагена</h5>
         </div>
         <div class="row flex-column">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="type1" value="first_type" name="f_type">
+              <input type="checkbox" class="custom-control-input" id="type1" value="first_type" name="type[]">
               <label class="custom-control-label" for="type1">Тип 1 и 3(кожа)</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="type2" value="second_type" name="s_type">
+              <input type="checkbox" class="custom-control-input" id="type2" value="second_type" name="type[]">
               <label class="custom-control-label" for="type2">Тип 3(суставы)</label>
             </div>
         </div>
@@ -24,15 +25,15 @@ id="btn-filt">Фильтры <i class="fas fa-filter"></i></button>
         </div>
         <div class="row flex-column">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="jpn" value="japan" name="japan">
+              <input type="checkbox" class="custom-control-input" id="jpn" value="japan" name="country[]">
               <label class="custom-control-label" for="jpn">Япония</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="usa" value="usa" name="usa">
+              <input type="checkbox" class="custom-control-input" id="usa" value="usa" name="country[]">
               <label class="custom-control-label" for="usa">США</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="other" value="other" name="other">
+              <input type="checkbox" class="custom-control-input" id="other" value="other" name="country[]">
               <label class="custom-control-label" for="other">Другие</label>
             </div>
         </div>
@@ -43,15 +44,15 @@ id="btn-filt">Фильтры <i class="fas fa-filter"></i></button>
         </div>
         <div class="row flex-column">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="form1" value="hydro_f" name="hydro_f">
+              <input type="checkbox" class="custom-control-input" id="form1" value="hydro_f" name="form_issue[]">
               <label class="custom-control-label" for="form1">Гидролизованный коллаген</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="form2" value="tablet_f" name="tablet_f">
+              <input type="checkbox" class="custom-control-input" id="form2" value="tablet_f" name="form_issue[]">
               <label class="custom-control-label" for="form2">Таблетированная форма</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="form3" value="drink_f" name="drink_f">
+              <input type="checkbox" class="custom-control-input" id="form3" value="drink_f" name="form_issue[]">
               <label class="custom-control-label" for="form3">Питьевой коллаген</label>
             </div>
         </div>
@@ -62,11 +63,11 @@ id="btn-filt">Фильтры <i class="fas fa-filter"></i></button>
         </div>
         <div class="row flex-column">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="material1" value="sea" name="sea">
+              <input type="checkbox" class="custom-control-input" id="material1" value="sea" name="material[]">
               <label class="custom-control-label" for="material1">Морского происхождения</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="material2" value="animals" name="animals">
+              <input type="checkbox" class="custom-control-input" id="material2" value="animals" name="material[]">
               <label class="custom-control-label" for="material2">Животного происхождения</label>
             </div>
         </div>
@@ -85,6 +86,7 @@ id="btn-filt">Фильтры <i class="fas fa-filter"></i></button>
             </div>
         </div>
     </div>
+    
     <div class="col-12 col-sm-3 col-md-12 col-lg-12 col-xl-12 filter-block">
         <div class="row justify-content-start">
             <button type="submit" class="col-10 col-sm-12 col-md-8 col-lg-6 col-xl-6 btn-custom" id="submit">Подтвердить</button>

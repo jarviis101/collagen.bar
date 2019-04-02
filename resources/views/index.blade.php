@@ -105,7 +105,7 @@
 			<div class="slider-item">
 				<div class="col-xl-12 product">
 				    <div class="img-product-block">
-						<a href="/products/{{$item->category_id}}" class="name-of-type"><span>{{ $item->name }}</span></a>
+						<a href="/product/{{$item->category_id}}" class="name-of-type"><span>{{ $item->name }}</span></a>
 						<img src="{{ asset('storage/' . $item->image) }}" alt="">
 					</div>
 				</div>

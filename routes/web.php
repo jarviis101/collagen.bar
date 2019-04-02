@@ -21,11 +21,12 @@ Route::get('/post/{slug}', 'PageController@postInner');
 
 
 Route::get('/products', 'PageController@product');
-Route::get('/products/{id}', 'PageController@category');
+Route::get('/product/{id}', 'PageController@category');
 Route::get('/product/{id}/{slug}', 'PageController@productInner');
 
 
-Route::get('/filter', 'ProductController@filter');
+Route::post('/filter_collagen', 'ProductController@filterCollagen');
+Route::post('/filter_hairCare', 'ProductController@filterHairCare');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

@@ -6,6 +6,7 @@
         
         @include('partials.head')
         <title>@yield('title') - Collagen Bar</title>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
         @yield('content')

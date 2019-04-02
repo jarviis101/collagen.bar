@@ -10,6 +10,7 @@ use App\News;
 use App\Collagen;
 use App\HairCare;
 use App\MediaProduct;
+use App\MediaProductHairCare;
 use App\Postq;
 use App\Product;
 use App\HomePageContent;
@@ -20,7 +21,7 @@ class PageController extends Controller
     public static function index()
     {
         $home_page_title = HomePageTitle::orderBy('created_at')->get();
-        $category = Category::orderBy('created_at')->get();
+        $category = Category::orderBy('order')->get();
         $page_content = HomePageContent::find(1);
         return view('index')->with('home_page_title', $home_page_title)->with('page_content', $page_content)->with('category', $category);
     }
@@ -77,13 +78,16 @@ class PageController extends Controller
         if($id == 1)
         {
             $product = HairCare::where('slug', '=', $slug)->first();
+            $idProduct = $product->id;
+            $photos = MediaProductHairCare::where('product', '=', $idProduct)->first();
         }
         if($id == 3)
         {
             $product = Collagen::where('slug', '=', $slug)->first();
+            $idProduct = $product->id;
+            $photos = MediaProduct::where('product', '=', $idProduct)->first();
         }
-        $id = $product->product_id;
-        $photos = MediaProduct::where('product', '=', $id)->first();
+        
         return view('product.innerProduct')->with('product', $product)->with('photos', $photos);
     }
 

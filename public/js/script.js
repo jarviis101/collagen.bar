@@ -110,14 +110,44 @@ $(document).ready(function(){
 	});
 
 
-	$('#submit').on('click', function(event){
+	$('#filter-form-coll').on('submit', function(event){
 		event.preventDefault();
+
+		var data = $(this).serialize();
 		$.ajaxSetup({
-			cache: true
+			cache: true,
+			headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    	}
 		});
-		$.get('/filter?' + $('#filter-form').serialize(), function(data)
-		{
-			$('#data-products').html(data);
+		$.ajax({
+			url: '/filter_collagen',
+			type: 'POST',
+			data: data,
+			success: function(data)
+			{
+				$('#data-products').html(data);
+			}
+		});
+	});
+	$('#filter-form-hair').on('submit', function(event){
+		event.preventDefault();
+
+		var data = $(this).serialize();
+		$.ajaxSetup({
+			cache: true,
+			headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    	}
+		});
+		$.ajax({
+			url: '/filter_hairCare',
+			type: 'POST',
+			data: data,
+			success: function(data)
+			{
+				$('#data-products').html(data);
+			}
 		});
 	});
 	$("#tabs").tabs();
