@@ -26,4 +26,10 @@ class Collagen extends Model
         return $this->hasMany(MediaProduct::class)
             ->orderBy('created_at', 'DESC');
     }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class)
+            ->orderBy('created_at', 'DESC');
+    }
 }

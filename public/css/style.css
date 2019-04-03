@@ -41,6 +41,7 @@
 @media screen and (min-width: 1200px) {
   #menu {
     width: 100%;
+    z-index: 999;
   }
 }
 #menu i.fas {
@@ -1391,6 +1392,7 @@
 }
 #product-section .products .card {
   border: none;
+  margin-bottom: 25px;
 }
 #product-section .products .card .card-body {
   padding: 0;
@@ -1783,4 +1785,9 @@
 .img-gallery-block img
 {
   height: inherit;
+}
+.badge-primary
+{
+  background: #6087c2;
+  margin-left: 10px;
 }

@@ -23,7 +23,7 @@ class HairCare extends Model
 
     public function hair_care()
     {
-        return $this->hasMany(MediaProduct::class)
+        return $this->hasMany(MediaProductHairCare::class)
             ->orderBy('created_at', 'DESC');
     }
 }

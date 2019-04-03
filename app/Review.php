@@ -11,5 +11,10 @@ class Review extends Model
     public $timestamp = true;
     
     protected $fillable = [
-        'from', 'comment'];
+        'from', 'email', 'comment', 'product'];
+    
+    public function collagens()
+    {
+        return $this->belongsTo(Collagen::class, 'id');
+    }
 }

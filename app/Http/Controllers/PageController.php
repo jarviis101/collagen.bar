@@ -9,10 +9,13 @@ use App\Footer;
 use App\News;
 use App\Collagen;
 use App\HairCare;
+use App\СollagenСosmetic;
 use App\MediaProduct;
 use App\MediaProductHairCare;
+use App\CosmeticMedia;
 use App\Postq;
 use App\Product;
+use App\Review;
 use App\HomePageContent;
 use Illuminate\Http\Request;
 
@@ -26,12 +29,12 @@ class PageController extends Controller
         return view('index')->with('home_page_title', $home_page_title)->with('page_content', $page_content)->with('category', $category);
     }
 
-
     public static function newsList()
     {
         $news = News::orderBy('created_at')->get();
         return view('news.news')->with('news', $news);
     }
+
     public static function newsInner($slug)
     {
         $news = News::where('slug', '=', $slug)->get();
@@ -43,6 +46,7 @@ class PageController extends Controller
         $post = Postq::orderBy('created_at')->get();
         return view('post.post')->with('post', $post);
     }
+
     public static function postInner($slug)
     {
         $post = Postq::where('slug', '=', $slug)->get();
@@ -51,10 +55,18 @@ class PageController extends Controller
 
     public static function product()
     {
-        $product = Product::orderBy('created_at')->get();
+        $collagen = Collagen::orderBy('created_at')->get();
+        $collagenCosmetic = СollagenСosmetic::orderBy('created_at')->get();
+        $hairCare = HairCare::orderBy('created_at')->get();
+        
         $name = "Все товары";
         $category_id = 4;
-        return view('product.product')->with('product', $product)->with('name', $name)->with('category_id', $category_id);
+        return view('product.product')
+        ->with('collagen', $collagen)
+        ->with('collagenCosmetic', $collagenCosmetic)
+        ->with('hairCare', $hairCare)
+        ->with('name', $name)
+        ->with('category_id', $category_id);
     }
 
     public static function category($id)
@@ -63,6 +75,10 @@ class PageController extends Controller
         {
             $product = HairCare::where('category_id', '=', $id)->get();
         }
+        if($id == 2)
+        {
+            $product = СollagenСosmetic::where('category_id', '=', $id)->get();
+        }
         if($id == 3)
         {
             $product = Collagen::where('category_id', '=', $id)->get();
@@ -70,7 +86,10 @@ class PageController extends Controller
         $category = Category::where('category_id', $id)->first();
         $name = $category->name;
         $category_id = $category->category_id;
-        return view('product.product')->with('product', $product)->with('name', $name)->with('category_id', $category_id);
+        return view('product.product')
+        ->with('product', $product)
+        ->with('name', $name)
+        ->with('category_id', $category_id);
     }
     
     public static function productInner($id, $slug)
@@ -80,6 +99,12 @@ class PageController extends Controller
             $product = HairCare::where('slug', '=', $slug)->first();
             $idProduct = $product->id;
             $photos = MediaProductHairCare::where('product', '=', $idProduct)->first();
+        }
+        if($id == 2)
+        {
+            $product = СollagenСosmetic::where('slug', '=', $slug)->first();
+            $idProduct = $product->id;
+            $photos = CosmeticMedia::where('product', '=', $idProduct)->first();
         }
         if($id == 3)
         {
@@ -91,13 +116,12 @@ class PageController extends Controller
         return view('product.innerProduct')->with('product', $product)->with('photos', $photos);
     }
 
-
-
     public static function getContacts()
     {
         $contacts = Contact::find(1);
         return $contacts;
     }
+
     public static function getFooter()
     {
         $category = Category::orderBy('created_at')->get();
