@@ -1,9 +1,6 @@
 @extends('layouts.main')
 @section('title', 'Публикация')
 @section('content')
-    <div class="custom-block-menu">
-        @include('partials.header')
-    </div>
     @foreach ($post as $item)	
         <section class="container-fluid" id="inner-article-title-section">
             <!--<div class="bg-image-container">

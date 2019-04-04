@@ -9,6 +9,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
+        @include('partials.header')
         @yield('content')
 
         @include('partials.scripts')

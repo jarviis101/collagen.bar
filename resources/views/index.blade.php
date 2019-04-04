@@ -2,7 +2,6 @@
 @section('title', 'Главная')
 
 @section('content')
-@include('partials.header')
 <section id="index-title-section">
     <!-- foreach -->
 	<div class="slider title-slider">

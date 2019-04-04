@@ -1,9 +1,6 @@
 @extends('layouts.main')
 @section('title', 'Товары')
 @section('content')
-    <div class="custom-block-menu">
-        @include('partials.header')
-	</div>
     <section class="container-fluid" id="product-section">
 		<div class="col-12 title-block">
 			<div class="row justify-content-center">

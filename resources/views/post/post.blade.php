@@ -2,9 +2,6 @@
 @section('title', 'Темы')
 
 @section('content')
-    <div class="custom-block-menu">
-        @include('partials.header')
-    </div>
     @php 
         $head_text = \App\PostsPageContent::find(1);
         $images = \App\PostsPageImage::find(1);

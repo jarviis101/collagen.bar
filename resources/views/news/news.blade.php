@@ -2,9 +2,6 @@
 @section('title', 'Новости')
 
 @section('content')
-    <div class="custom-block-menu">
-        @include('partials.header')
-    </div>
     <section class="container-fluid" id="news-section">
 		<div class="container">
 			<div class="row title-text justify-content-center">

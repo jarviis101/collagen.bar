@@ -20,7 +20,7 @@
                 </li>
             </ul>
             <div class="nav-list basket">
-                <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                <a href="/cart"><i class="fas fa-shopping-basket"></i></a>
                 <span class="badge badge-primary">{{ Session::has('cart') ? Session::get('cart')->totalCounts : '0' }}</span>
             </div>
         </div>

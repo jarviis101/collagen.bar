@@ -10,11 +10,11 @@ id="btn-filt">Фильтры <i class="fas fa-filter"></i></button>
         </div>
         <div class="row flex-column">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="type1" value="first_type" name="type[]">
+              <input type="checkbox" class="custom-control-input" id="type1" value="first_type" name="type1">
               <label class="custom-control-label" for="type1">Профессиональная серия</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="type2" value="second_type" name="type[]">
+              <input type="checkbox" class="custom-control-input" id="type2" value="second_type" name="type2">
               <label class="custom-control-label" for="type2">Домашний уход</label>
             </div>
         </div>
@@ -25,15 +25,15 @@ id="btn-filt">Фильтры <i class="fas fa-filter"></i></button>
         </div>
         <div class="row flex-column">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="jpn" value="japan" name="country[]">
+              <input type="checkbox" class="custom-control-input" id="jpn" value="japan" name="country1">
               <label class="custom-control-label" for="jpn">Япония</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="eur" value="eur" name="country[]">
+              <input type="checkbox" class="custom-control-input" id="eur" value="eur" name="country2">
               <label class="custom-control-label" for="eur">Европа</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="other" value="other" name="country[]">
+              <input type="checkbox" class="custom-control-input" id="other" value="other" name="country3">
               <label class="custom-control-label" for="other">Другие</label>
             </div>
         </div>
@@ -44,23 +44,23 @@ id="btn-filt">Фильтры <i class="fas fa-filter"></i></button>
         </div>
         <div class="row flex-column">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="brand1" value="shiseido" name="brand[]">
+              <input type="checkbox" class="custom-control-input" id="brand1" value="shiseido" name="brand1">
               <label class="custom-control-label" for="brand1">Shiseido</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="brand2" value="lebel" name="brand[]">
+              <input type="checkbox" class="custom-control-input" id="brand2" value="lebel" name="brand2">
               <label class="custom-control-label" for="brand2">Lebel</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="brand3" value="artego" name="brand[]">
+              <input type="checkbox" class="custom-control-input" id="brand3" value="artego" name="brand3">
               <label class="custom-control-label" for="brand3">Artego</label>
             </div>
             <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="brand4" value="chi" name="brand[]">
+                <input type="checkbox" class="custom-control-input" id="brand4" value="chi" name="brand4">
                 <label class="custom-control-label" for="brand4">Chi</label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="brand5" value="other" name="brand[]">
+                <input type="checkbox" class="custom-control-input" id="brand5" value="other" name="brand5">
                 <label class="custom-control-label" for="brand5">Другие</label>
               </div>
         </div>
@@ -71,23 +71,23 @@ id="btn-filt">Фильтры <i class="fas fa-filter"></i></button>
         </div>
         <div class="row flex-column">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="type_of_hair1" value="normal" name="type_of_hair[]">
+              <input type="checkbox" class="custom-control-input" id="type_of_hair1" value="normal" name="type_of_hair1">
               <label class="custom-control-label" for="type_of_hair1">Нормальные</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="type_of_hair2" value="thin" name="type_of_hair[]">
+              <input type="checkbox" class="custom-control-input" id="type_of_hair2" value="thin" name="type_of_hair2">
               <label class="custom-control-label" for="type_of_hair2">Тонкие</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="type_of_hair3" value="color" name="type_of_hair[]">
+              <input type="checkbox" class="custom-control-input" id="type_of_hair3" value="color" name="type_of_hair3">
               <label class="custom-control-label" for="type_of_hair3">Окрашенные</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="type_of_hair4" value="weakened" name="type_of_hair[]">
+              <input type="checkbox" class="custom-control-input" id="type_of_hair4" value="weakened" name="type_of_hair4">
               <label class="custom-control-label" for="type_of_hair4">Ослабленные</label>
             </div>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="type_of_hair5" value="damaged" name="type_of_hair[]">
+              <input type="checkbox" class="custom-control-input" id="type_of_hair5" value="damaged" name="type_of_hair5">
               <label class="custom-control-label" for="type_of_hair5">Очень поврежденные</label>
             </div>
         </div>
@@ -98,27 +98,27 @@ id="btn-filt">Фильтры <i class="fas fa-filter"></i></button>
       </div>
       <div class="row flex-column">
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="product_type1" value="normal" name="product_type[]">
+            <input type="checkbox" class="custom-control-input" id="product_type1" value="normal" name="product_type1">
             <label class="custom-control-label" for="product_type1">Безсульфатные шампуни SLS</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="product_type2" value="thin" name="product_type[]">
+            <input type="checkbox" class="custom-control-input" id="product_type2" value="thin" name="product_type2">
             <label class="custom-control-label" for="product_type2">Лечение (глубокая реконструкция)</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="product_type3" value="color" name="product_type[]">
+            <input type="checkbox" class="custom-control-input" id="product_type3" value="color" name="product_type3">
             <label class="custom-control-label" for="product_type3">Маски для волос</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="product_type4" value="weakened" name="product_type[]">
+            <input type="checkbox" class="custom-control-input" id="product_type4" value="weakened" name="product_type4">
             <label class="custom-control-label" for="product_type4">Спрей (глубокое увлажнение)</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="product_type5" value="damaged" name="product_type[]">
+            <input type="checkbox" class="custom-control-input" id="product_type5" value="damaged" name="product_type5">
             <label class="custom-control-label" for="product_type5">Бальзамы/Кондиционеры</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="product_type6" value="damaged" name="product_type[]">
+            <input type="checkbox" class="custom-control-input" id="product_type6" value="damaged" name="product_type6">
             <label class="custom-control-label" for="product_type6">Наборы (SET)</label>
           </div>
       </div>
