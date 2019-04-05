@@ -99,7 +99,7 @@
 		</div>
 	</div>
 	<div class="row mt-100px">
-		<div class="slider col-xl-12 type-of-slider">
+		<div class="slider col-12 type-of-slider justify-content-center">
             @foreach ($category as $item)
 			<div class="slider-item">
 				<div class="col-xl-12 product">

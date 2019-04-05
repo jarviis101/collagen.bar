@@ -142,6 +142,7 @@ class ProductController extends Controller
         $request->session()->put('cart', $cart);
         return redirect()->back();
     }
+
     public function getCart(){
         if(!Session::has ('cart')){
             return view('cart');
@@ -156,7 +157,6 @@ class ProductController extends Controller
             }
 
         }
-
         return view('cart', ['products'=> $cart->items, 'totalPrice'=>$totalPrice]);
     }
 }

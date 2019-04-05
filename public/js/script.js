@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $('.title-slider').slick({
         dots: false,
         draggable: false,
@@ -172,5 +173,13 @@ $(document).ready(function(){
             }
         });
     });
-	$("#tabs").tabs();
+    $("#tabs").tabs();
+    if(window.matchMedia('(max-width: 991px)').matches){
+        $('.button-nav-md').on('click', function(e)
+        {
+            e.preventDefault();
+            var selector = $('.mask');
+            selector.slideToggle("slow");
+        });
+    }
 });
