@@ -2038,3 +2038,59 @@
   background: #C3CCEA;
   border: none;
 }
+.max-w-1440px
+{
+  max-width: 1440px;
+}
+#inner-product-tabs-section .card-header
+{
+  background: none;
+  border: none;
+}
+#inner-product-tabs-section .card-body
+{
+  padding-left: 0;
+}
+#inner-product-tabs-section .date
+{
+  background: none;
+  border: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 26px;
+  color: #707AFE;
+}
+#inner-product-tabs-section .from
+{
+  font-family: "Montserrat";
+  color: #C3CCEA;
+  font-size: 1.2rem;
+  line-height: 26px;
+}
+#tabs-4 .btn-custom {
+  color: #fff;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#tabs-4 .btn-custom:hover {
+  text-decoration: none;
+  transform: translateY(0px);
+}
+.reviews-fields
+{
+  font-family: "Montserrat";
+  color: #3d61da;
+  line-height: 26px;
+}
+.reviews-fields span
+{
+  font-family: "Montserrat";
+  color: #f70202;
+  line-height: 26px;
+}

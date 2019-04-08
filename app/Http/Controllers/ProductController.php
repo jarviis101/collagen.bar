@@ -126,7 +126,25 @@ class ProductController extends Controller
         return view('product.product')->with('product', $product)->with('category_id', $category_id);
     }
 
-    public function getAddToCart(HttpReq $request, $category_id, $slug){
+
+    public static function getCart(){
+        if(!Session::has ('cart')){
+            return view('cart');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+
+        $totalPrice = 0;
+        if (count($cart->items)){
+            foreach ($cart->items as $product){
+                $totalPrice += $product['price'];
+            }
+
+        }
+        return view('cart', ['products'=> $cart->items, 'totalPrice'=>$totalPrice]);
+    }
+
+    public static function getAddToCart(HttpReq $request, $category_id, $slug){
         if($category_id == 1)
         {
             $product = HairCare::where('slug', '=', $slug)->first();
@@ -143,20 +161,37 @@ class ProductController extends Controller
         return redirect()->back();
     }
 
-    public function getCart(){
-        if(!Session::has ('cart')){
-            return view('cart');
+    public static function getDeleteToCart(HttpReq $request, $category_id, $slug){
+        if($category_id == 1)
+        {
+            $product = HairCare::where('slug', '=', $slug)->first();
         }
-        $oldCart = Session::get('cart');
+        if($category_id == 3)
+        {
+            $product = Collagen::where('slug', '=', $slug)->first();
+        }
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart($oldCart);
+        $cart->delete($product, $product->slug);
 
-        $totalPrice = 0;
-        if (count($cart->items)){
-            foreach ($cart->items as $product){
-                $totalPrice += $product['price'];
-            }
-
+        $request->session()->put('cart', $cart);
+        return redirect()->back();
+    }
+    public static function getRemoveItem($category_id, $slug){
+        if($category_id == 1)
+        {
+            $product = HairCare::where('slug', '=', $slug)->first();
         }
-        return view('cart', ['products'=> $cart->items, 'totalPrice'=>$totalPrice]);
+        if($category_id == 3)
+        {
+            $product = Collagen::where('slug', '=', $slug)->first();
+        }
+        $id = $product->id;
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->removeItem($id);
+
+        Session::put('cart', $cart);
+        return redirect()->back();
     }
 }

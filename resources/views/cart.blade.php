@@ -44,9 +44,9 @@
                                         <td>
                                             <div class="col-xl-12">
                                                 <div class="row d-flex justify-content-center">
-                                                    <a href="#" class="btn btn-table" role="button"><i class="fas fa-minus"></i></a>
+                                                    <a href="/delete-from-cart/{{$product['item']['category_id']}}/{{$product['item']['slug']}}" class="btn btn-table" role="button"><i class="fas fa-minus"></i></a>
                                                     <h5 class="col-3 d-flex align-items-center justify-content-center counts">{{ $product['counts'] }}</h5>
-                                                    <a href="#" class="btn btn-table" role="button"><i class="fas fa-plus"></i></a>    
+                                                    <a href="/add-to-cart/{{$product['item']['category_id']}}/{{$product['item']['slug']}}" class="btn btn-table" role="button"><i class="fas fa-plus"></i></a>    
                                                 </div>
                                             </div>
                                         </td>

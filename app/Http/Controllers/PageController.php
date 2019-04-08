@@ -14,8 +14,9 @@ use App\MediaProduct;
 use App\MediaProductHairCare;
 use App\CosmeticMedia;
 use App\Postq;
-use App\Product;
 use App\Review;
+use App\ReviewCosmetic;
+use App\ReviewHairCare;
 use App\HomePageContent;
 use Illuminate\Http\Request;
 
@@ -97,23 +98,28 @@ class PageController extends Controller
         if($id == 1)
         {
             $product = HairCare::where('slug', '=', $slug)->first();
-            $idProduct = $product->id;
-            $photos = MediaProductHairCare::where('product', '=', $idProduct)->first();
+            $slug = $product->slug;
+            //$idProduct = $product->id;
+            $comments = Review::where('product', '=', $slug)->orderBy('created_at', 'desc')->get();
+            $photos = MediaProductHairCare::where('product', '=', $slug)->first();
         }
         if($id == 2)
         {
             $product = СollagenСosmetic::where('slug', '=', $slug)->first();
-            $idProduct = $product->id;
-            $photos = CosmeticMedia::where('product', '=', $idProduct)->first();
+            $slug = $product->slug;
+            //$idProduct = $product->id;
+            $comments = Review::where('product', '=', $slug)->orderBy('created_at', 'desc')->get();
+            $photos = CosmeticMedia::where('product', '=', $slug)->first();
         }
         if($id == 3)
         {
             $product = Collagen::where('slug', '=', $slug)->first();
-            $idProduct = $product->id;
-            $photos = MediaProduct::where('product', '=', $idProduct)->first();
+            $slug = $product->slug;
+            //$idProduct = $product->id;
+            $comments = Review::where('product', '=', $slug)->orderBy('created_at', 'desc')->get();
+            $photos = MediaProduct::where('product', '=', $slug)->first();
         }
-        
-        return view('product.innerProduct')->with('product', $product)->with('photos', $photos);
+        return view('product.innerProduct')->with('product', $product)->with('photos', $photos)->with('comments', $comments);
     }
 
     public static function getContacts()

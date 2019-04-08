@@ -30,8 +30,21 @@ Route::post('/filter_hairCare', 'ProductController@filterHairCare');
 
 Route::get('/cart', 'ProductController@getCart');
 
+//add 1 item
 Route::get('/add-to-cart/{category_id}/{slug}', 'ProductController@getAddToCart');
+
+//remove 1 item
+Route::get('/delete-from-cart/{category_id}/{slug}', 'ProductController@getDeleteToCart');
+
+//remove all items
+Route::get('/remove/{id}', 'ProductController@getRemoveItem');
+
+
 Route::post('/send', 'MailController@send');
+
+
+Route::post('/add_review_collagen', 'ReviewController@addReviewCollagen');
+Route::post('/add_review_hair_care', 'ReviewController@addReviewHairCare');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

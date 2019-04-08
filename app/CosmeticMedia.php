@@ -15,6 +15,6 @@ class CosmeticMedia extends Model
         
     public function collagen_cosmetics()
     {
-        return $this->belongsTo(СollagenСosmetic::class, 'id');
+        return $this->belongsTo(СollagenСosmetic::class, 'slug');
     }
 }

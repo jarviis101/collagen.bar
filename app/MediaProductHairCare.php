@@ -15,6 +15,6 @@ class MediaProductHairCare extends Model
         
     public function hair_cares()
     {
-        return $this->belongsTo(HairCare::class, 'id');
+        return $this->belongsTo(HairCare::class, 'slug');
     }
 }

@@ -197,8 +197,56 @@
                     @endif
                 </div>
               </div>
-              <div id="tabs-4">
-                <p class="description col-12">Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+              <div id="tabs-4"><div class="row justify-content-center align-items-center flex-column">
+                    @if ($product->category_id == 1)
+                        <form action="/add_review_hair_care" class="col-xl-6" method="POST">
+                    @endif
+                    @if ($product->category_id == 3)
+                        <form action="/add_review_collagen" class="col-xl-6" method="POST">
+                    @endif
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                            
+                            <label for="name" class="reviews-fields">Имя <span> *</span> </label>
+                            <input type="text" name="name" id="name" class="form-control" required placeholder="Введите имя">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="reviews-fields">E-mail <span> *</span> </label>
+                            <input type="email" id="email" name="email" class="form-control" required placeholder="Введите e-mail">
+                        </div>
+                        <div class="form-group">
+                            <input name="slug" class="form-control" value="{{ $product->slug }}" type="hidden">
+                        </div>
+                        <div class="form-group">
+                            <label for="review" class="reviews-fields">Ваш комментарий <span> *</span> </label>
+                            <textarea class="form-control" id="review" name="review" rows="4" required style="resize:none;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-custom col-xl-5">Отправить</button>
+                    </form>       
+                @if (!empty($comments))
+                    @foreach ($comments as $item)
+                        <div class="card col-xl-6">
+                            <div class="card-header">
+                                <div class="row justify-content-start">
+                                    <div class="date col-xl-4">
+                                        {{ $item->created_at->formatLocalized('%d.%m.%Y  в %H:%M') }}
+                                    </div>
+                                    <div class="from">
+                                        {{ $item->from }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="description col-12">{{ $item->comment }}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                @else
+                    <div class="row justify-content-center align-items-center">
+                        <h2 class="py-5">Этот товар не содержит комментариев</h2>
+                    </div>
+                @endif
+                </div>  
               </div>
               <div id="tabs-5">
                 <p class="description col-12">Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>

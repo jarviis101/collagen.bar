@@ -25,4 +25,12 @@ class СollagenСosmetic extends Model
         return $this->hasMany(CosmeticMedia::class)
             ->orderBy('created_at', 'DESC');
     }
+
+    public function review_cosmetic()
+    {
+        return $this->hasMany(ReviewCosmetic::class)
+            ->orderBy('created_at', 'DESC');
+    }
+
+
 }

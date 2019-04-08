@@ -20,8 +20,8 @@
         </div>
     </div>
 </div>
-<nav class="navbar navbar-dark justify-content-between justify-content-sm-between justify-content-md-between justify-content-lg-between justify-content-xl-start" id="menu">
-    <div class="container-fluid">
+<nav class="navbar navbar-dark justify-content-center" id="menu">
+    <div class="container-fluid max-w-1440px">
         <a class="navbar-toggler d-xl-flex d-lg-flex d-md-none d-sm-none d-none ml-0 ml-sm-0 ml-md-0 ml-lg-0 ml-xl-5 button-nav" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </a>

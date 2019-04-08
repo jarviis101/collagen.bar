@@ -15,6 +15,6 @@ class MediaProduct extends Model
     
     public function collagens()
     {
-        return $this->belongsTo(Collagen::class, 'id');
+        return $this->belongsTo(Collagen::class, 'slug');
     }
 }

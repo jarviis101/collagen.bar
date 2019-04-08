@@ -148,7 +148,7 @@
 		</div>
 	</div>
 	<div class="row mt-100px">
-		<div class="slider col-xl-12 services-slider">
+		<div class="slider col-12 justify-content-center services-slider">
 			<div class="slider-item">
 				<div class="col-xl-12 product">
 					<div class="img-product-block">
@@ -164,15 +164,7 @@
 						<img src="img/cosmetologist.png" alt="">
 					</div>
 				</div>
-			</div>
-			<div class="slider-item">
-				<div class="col-xl-12 product">
-					<div class="img-product-block">
-						<a href="#" class="name-of-type"><span>Косметика с коллагеном</span></a>
-						<img src="img/product(2).png" alt="">
-					</div>
-				</div>
-			</div>					
+			</div>				
 		</div>
 		<div class="sliders-arrows container">
 			<a data-role="none" class="slick-prev">

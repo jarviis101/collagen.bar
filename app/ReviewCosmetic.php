@@ -4,17 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Review extends Model
+class ReviewCosmetic extends Model
 {
-    protected $table = 'reviews';
+    protected $table = 'review_cosmetics';
     protected $primaryKey = 'id';
     public $timestamp = true;
     
     protected $fillable = [
         'from', 'email', 'comment', 'product'];
     
-    public function collagens()
+    public function collagen_cosmetics()
     {
-        return $this->belongsTo(Collagen::class, 'slug');
+        return $this->belongsTo(СollagenСosmetic::class, 'slug');
     }
 }
