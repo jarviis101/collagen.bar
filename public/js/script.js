@@ -55,47 +55,72 @@ $(document).ready(function(){
         draggable: true,
         slidesToShow: 2,
         slidesToScroll: 1,
+        // responsive: [
+        // {
+        //     breakpoint: 2560,
+        //     settings: {
+        //         draggable: true,
+        //         slidesToShow: 3,
+        //         slidesToScroll: 1
+        //     } 
+        // },
+        // {
+        //     breakpoint: 1441,
+        //     settings: {
+        //     draggable: true,
+        //     slidesToShow: 2,
+        //     slidesToScroll: 1
+        //     } 
+        // },
+        // {
+        //     breakpoint: 992,
+        //     settings: {
+        //     draggable: true,
+        //     slidesToShow: 2,
+        //     slidesToScroll: 1
+        //     } 
+        // },
+        // {
+        //     breakpoint: 767,
+        //     settings: {
+        //     draggable: true,
+        //         slidesToShow: 2,
+        //         slidesToScroll: 1
+        //     } 
+        // },
+        // {
+        //     breakpoint: 575,
+        //     settings: {
+        //         draggable: true,
+        //         slidesToShow: 1,
+        //         slidesToScroll: 1
+        //     } 
+        // }],
         responsive: [
-        {
-            breakpoint: 2560,
-            settings: {
-                draggable: true,
-                slidesToShow: 3,
-                slidesToScroll: 1
-            } 
-        },
-        {
-            breakpoint: 1441,
-            settings: {
-            draggable: true,
-            slidesToShow: 2,
-            slidesToScroll: 1
-            } 
-        },
-        {
-            breakpoint: 992,
-            settings: {
-            draggable: true,
-            slidesToShow: 2,
-            slidesToScroll: 1
-            } 
-        },
-        {
-            breakpoint: 767,
-            settings: {
-            draggable: true,
-                slidesToShow: 2,
-                slidesToScroll: 1
-            } 
-        },
-        {
-            breakpoint: 575,
-            settings: {
-                draggable: true,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            } 
-        }],
+            {
+                breakpoint: 2560,
+                settings: {
+                    draggable: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                } 
+            },
+            {
+                breakpoint: 1441,
+                settings: {
+                    draggable: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                } 
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    draggable: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                } 
+            }],
         draggable: true,  
         prevArrow: ('#index-services-section .slick-prev'),
         nextArrow: ('#index-services-section .slick-next')

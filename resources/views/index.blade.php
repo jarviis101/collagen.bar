@@ -8,7 +8,7 @@
         @foreach ($home_page_title as $item)
 		<div class="slide-item col-12">
 			<div class="title-bg-image">
-            <img src="{{ asset('storage/' . $item->image) }}" alt="">
+            	<img src="{{ asset('storage/' . $item->image) }}" alt="">
 			</div>
 			<div class="container">
 				<div class="row justify-content-center">
@@ -154,6 +154,14 @@
 					<div class="img-product-block">
 						<a href="#" class="name-of-type"><span>Диетолог</span></a>
 						<img src="img/doctor.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="slider-item">
+				<div class="col-xl-12 product">
+					<div class="img-product-block">
+						<a href="#" class="name-of-type"><span>Косметолог</span></a>
+						<img src="img/cosmetologist.png" alt="">
 					</div>
 				</div>
 			</div>
